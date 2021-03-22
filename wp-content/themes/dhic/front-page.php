@@ -80,7 +80,7 @@ get_header();
             <div class="col-md-6">
                 <div>
                     <figure id="admin-block">
-                        <img max-height="300" src="<?php echo get_theme_file_uri('images/admin_block.jpeg'); ?>" alt="Admin Block">
+                        <img max-height="300" src="<?php echo get_theme_file_uri('images/docu_cover.png'); ?>" alt="DHIC sky view">
                     </figure>
                 </div>
             </div>
@@ -121,9 +121,9 @@ get_header();
                             <?php endif; ?>
                         </figure>
                         <div class="kode_blog_text">
-                            <h4><a href="<?php echo get_the_permalink(); ?>"><span><?php the_title(); ?></h4>
+                            <h4 class="<?php renderMalayalamClass(); ?>"><a href="<?php echo get_the_permalink(); ?>"><span><?php the_title(); ?></h4>
                             <div class="kode_blog_caption">
-                                <p>
+                                <p class="<?php renderMalayalamClass(); ?>">
                                     <?php if (has_excerpt()) :
                                         the_excerpt();
                                     else :
@@ -185,9 +185,9 @@ get_header();
                                 </div>
                                 <div class="box-info">
                                     <div class="box-info__title">
-                                        <a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
+                                        <a class="<?php renderMalayalamClass(); ?>" href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
                                     </div>
-                                    <div class="box-info__extract">
+                                    <div class="box-info__extract <?php renderMalayalamClass(); ?>">
                                         <?php if (has_excerpt()) :
                                             the_excerpt();
                                         else :

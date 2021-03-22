@@ -8,8 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darul Hasanath Islamic Complex</title>
+    <link rel="shortcut icon" href="<?php echo get_theme_file_uri('images/logo_single.png') ?>" type="image/x-icon">
 
     <?php wp_head(); ?>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -36,15 +39,15 @@
                             <ul>
                                 <li>
                                     <span><i class="fa fa-envelope"></i>Email Address</span>
-                                    <a href="#">darulhasanath@gmail.com</a>
+                                    <a href="mailto:darulhasanath@gmail.com">darulhasanath@gmail.com</a>
                                 </li>
                                 <li>
                                     <span><i class="fa fa-phone"></i>Contact No</span>
-                                    <a href="#">+91 497 2796938</a>
+                                    <a href="tel:+914972796938">+91 497 2796938</a>
                                 </li>
                                 <li>
                                     <span><i class="fa fa-calendar"></i>Office Timings</span>
-                                    <a href="#">Mon - Sat 09:00 A.M - 06:00 P.M</a>
+                                    <a href="javascript:void(0)">Mon - Sat 09:00 A.M - 06:00 P.M</a>
                                 </li>
                             </ul>
                         </div>
@@ -63,7 +66,7 @@
                                             <button class="overlay-close" type="button">Close</button>
                                             <!--Search Bar Inner Start-->
                                             <div class="cp-search-inner">
-                                                <form class="kode-search kode_search-form" method="get" id="searchform">
+                                                <form action="<?php echo esc_url(site_url()); ?>" class="kode-search kode_search-form" method="get" id="searchform">
                                                     <input type="text" name="s" id="s" autocomplete="off" data-default="" />
                                                     <button class="submit" type="submit"><i class="fa fa-search"></i></button>
                                                 </form>
@@ -75,126 +78,9 @@
                             </ul>
                             <div class="donate_btn">
                                 <!-- Button trigger modal -->
-                                <div class="medium_btn theme_color_bg btn_hover2" data-toggle="modal" data-target="#myModal">
+                                <a href="<?php echo esc_url(site_url('donate')); ?>" class="medium_btn theme_color_bg btn_hover2">
                                     Donate Us
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <div class="modal-body">
-                                                <!--KODE DONATE DES START-->
-                                                <div class="kode_donate_des">
-                                                    <div class="kode_doantion_amount">
-                                                        <h4>Donate Now</h4>
-                                                        <div class="kode_amount_list">
-                                                            <span>₹100</span>
-                                                            <span>₹250</span>
-                                                            <span>₹500</span>
-                                                            <span>₹1000</span>
-                                                        </div>
-                                                        <div class="kf_commet_field">
-                                                            <input placeholder="Other Amount" name="amount" type="text" value="" data-default="Amount*" size="30" required>
-                                                        </div>
-                                                    </div>
-                                                    <!--KODE DONATION ROW START-->
-                                                    <div class="kode_donation_row">
-                                                        <h4>Billing Information</h4>
-                                                        <!--kode AUTHOR WRAP COMMENTS FORM START -->
-                                                        <form method="post" class="kode_comment">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="kf_commet_field">
-                                                                        <input placeholder="Enter Name" name="author" type="text" value="" data-default="Name*" size="30" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="kf_commet_field">
-                                                                        <input placeholder="Your Email" name="author" type="text" value="" data-default="Name*" size="30" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="kf_commet_field">
-                                                                        <input placeholder="Your Address" name="author" type="text" value="" data-default="Name*" size="30" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="kode_donation_item">
-                                                                        <select class="chosen-select">
-                                                                            <option value="Select Course Name">Your Country</option>
-                                                                            <option value="saab">Afghanistan</option>
-                                                                            <option value="mercedes">Albania</option>
-                                                                            <option value="audi">Algeria</option>
-                                                                            <option value="mercedes">Albania</option>
-                                                                            <option value="audi">Algeria</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="kode_donation_item">
-                                                                        <select class="chosen-select">
-                                                                            <option value="Select Course Name">Your City</option>
-                                                                            <option value="saab">Karachi</option>
-                                                                            <option value="mercedes">Rawalpindi</option>
-                                                                            <option value="audi">Punjab</option>
-                                                                            <option value="mercedes">Faisalabad</option>
-                                                                            <option value="audi">Sindh</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="kf_commet_field">
-                                                                        <input placeholder="Your Mobile" name="author" type="text" value="" data-default="Name*" size="30" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <div class="kode_payment_list">
-                                                                        <h5>Choose Your Payment Method</h5>
-                                                                        <ul class="radio_points">
-                                                                            <li>
-                                                                                <div class="checkbox_radio">
-                                                                                    <input type="radio" name="one" id="radio1">
-                                                                                    <span></span>
-                                                                                    <label for="radio1">Pay Pal</label>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li>
-                                                                                <div class="checkbox_radio">
-                                                                                    <input type="radio" name="one" id="radio2">
-                                                                                    <span></span>
-                                                                                    <label for="radio2">Stripe</label>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li>
-                                                                                <div class="checkbox_radio">
-                                                                                    <input type="radio" name="one" id="radio3">
-                                                                                    <span></span>
-                                                                                    <label for="radio3">Credit Card</label>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li>
-                                                                                <div class="checkbox_radio">
-                                                                                    <input type="radio" name="one" id="radio4">
-                                                                                    <span></span>
-                                                                                    <label for="radio4">Other Source</label>
-                                                                                </div>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <p class="form-submit"><button class="medium_btn theme_color_bg">Donate Now</button></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                        <!--kode AUTHOR WRAP COMMENTS FORM END -->
-                                                    </div>
-                                                    <!--KODE DONATION ROW END-->
-                                                </div>
-                                                <!--KODE DONATE DES END-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <!--KODE TOP2 ICON END-->
@@ -206,7 +92,7 @@
             <!--KODE TOP2 WRAP END-->
 
             <!--KODE NAVIGATION WRAP START-->
-            <div class="kode_navigation_wrap">
+            <div class="kode_navigation_wrap sticky-nav">
                 <!--CONTAINER START-->
                 <div class="container">
                     <div class="top_logo">
@@ -228,8 +114,8 @@
                                     <li><a class="<?php echo $page == 'about-us/committee' ? 'active' : ''; ?>" href="<?php echo esc_url(site_url('about-us/committee')); ?>">Committee</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Institutes</a></li>
+                            <li><a href="<?php echo esc_url(site_url('/services')) ?>">Services</a></li>
+                            <li><a href="<?php echo esc_url(site_url('/institutes')) ?>">Institutes</a></li>
                             <li><a href="javascript:void(0)">Events</a>
                                 <ul class="kode">
                                     <li><a href="blog.html">Latest</a></li>
@@ -237,7 +123,7 @@
                                     <li><a href="blog01.html">Archive</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a <?php echo $page == 'gallery' ? 'active' : ''; ?> href="<?php echo esc_url(site_url('/gallery')); ?>">Gallery</a></li>
                             <li><a class="<?php echo $page == 'contact-us' ? 'active' : ''; ?>" href="<?php echo esc_url(site_url('/contact-us')); ?>">Contact Us</a></li>
                         </ul>
                         <!--DL Menu Start-->
@@ -254,16 +140,16 @@
                                         <li><a class="<?php echo $page == 'about-us/committee' ? 'active' : ''; ?>" href="<?php echo esc_url(site_url('about-us/committee')); ?>">Committee</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Institutes</a></li>
-                                <li><a href="#">Events</a>
+                                <li><a href="<?php echo esc_url(site_url('/services')) ?>">Services</a></li>
+                                <li><a href="<?php echo esc_url(site_url('/institutes')) ?>">Institutes</a></li>
+                                <li><a href="javascript:void(0)">Events</a>
                                     <ul class="dl-submenu">
                                         <li><a href="#">Latest</a></li>
                                         <li><a href="#">News</a></li>
                                         <li><a href="#">Archive</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Gallery</a></li>
+                                <li><a <?php echo $page == 'gallery' ? 'active' : ''; ?> href="<?php echo esc_url(site_url('/gallery')); ?>">Gallery</a></li>
                                 <li><a class="<?php echo $page == 'contact-us' ? 'active' : ''; ?>" href="<?php echo esc_url(site_url('/contact-us')); ?>">Contact Us</a></li>
                             </ul>
                         </div>
@@ -271,9 +157,9 @@
                     </div>
                     <div class="kode_navi_icon">
                         <ul>
-                            <li><a class="hvr-ripple-out" href="#"><i class="fa fa-whatsapp"></i></a></li>
-                            <li><a class="hvr-ripple-out" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="hvr-ripple-out" href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a class="hvr-ripple-out" href="https://wa.me/919747619659" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a class="hvr-ripple-out" href="https://www.facebook.com/darulhasanath" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="hvr-ripple-out" href="https://www.youtube.com/channel/UCo9Okjd_22LjGnmmEYVuhTw/videos" target="_blank"><i class="fa fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>

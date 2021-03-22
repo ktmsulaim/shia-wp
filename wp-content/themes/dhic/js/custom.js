@@ -582,7 +582,66 @@ $(document).ready(function(){
 				 }, 2000);
 			 }
 		 }
-		
+
+		 /**
+		  * -------------------------------------------------------------------
+		  *  Sticky nav
+		  * -------------------------------------------------------------------
+		  */
+		 $(".sticky-nav").sticky({ topSpacing: 0, center:true, className:"stickActive" });
+		 
+		 /**
+		  * -------------------------------------------------------------------
+		  *  Send email via JS
+		  * -------------------------------------------------------------------
+		  */
+		 function sendEmailJs(form) {
+			return emailjs.sendForm('default_service', 'template_8zf8obd', form);
+		 }
+
+		 $('.mailSendButton, #submit-contact').click(function(){
+			 const form = $(this).closest('form')[0];
+			 // validation
+			 const name = $(form).find('input[name="user_name"]').val();
+			 const email = $(form).find('input[name="user_email"]').val();
+			 const phone = $(form).find('input[name="user_phone"]').val();
+			 const message = $(form).find('textarea[name="message"]').val();
+
+			 if(name === '') {
+				 alert('Name is required!');
+			 }
+
+			 if(email === '') {
+				 alert('Email is required!');
+			 }
+
+			 // valid email
+			 const emailVerification = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			 const emailValid = email.length > 0 && emailVerification.test(email);
+			 if(!emailValid) {
+				alert('Please enter a valid email!');
+			 }
+
+			 if(message === '') {
+				 alert('Message is required!');
+			 }
+
+			 if(name && emailValid && message) {
+				 $(this).prop('disabled', true);
+				 $(this).text('Sending...');
+				 sendEmailJs(form).then(resp => {
+					alert('Your message was sent!');
+					form.reset();
+				 })
+				 .catch(err => {
+					 alert('An error was occured!');
+				 }).finally(() => {
+					$(this).prop('disabled', false);
+					$(this).text('Submit Now');
+				 });
+			 }
+
+		 });
 });
 
 	

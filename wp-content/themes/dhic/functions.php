@@ -6,6 +6,7 @@ function scripts()
 {
     wp_enqueue_style('bootstrap', get_theme_file_uri('/css/bootstrap.css'));
     wp_enqueue_style('fontawesome', get_theme_file_uri('/css/font-awesome.css'));
+    wp_enqueue_style('sidebarWidget', get_theme_file_uri('/css/sidebar-widget.css'));
     wp_enqueue_style('slick', get_theme_file_uri('/css/slick.css'));
     wp_enqueue_style('slickTheme', get_theme_file_uri('/css/slick-theme.css'));
     wp_enqueue_style('jqueryBoxSlider', get_theme_file_uri('/css/jquery.bxslider.css'));
@@ -24,7 +25,7 @@ function scripts()
     wp_enqueue_style('responsive', get_theme_file_uri('/css/responsive.css'));
 
 
-    wp_enqueue_script('jqueryCore', get_theme_file_uri('/js/jquery.js'), NULL, '1.0', true);
+    wp_enqueue_script('jqueryCore', get_theme_file_uri('/js/jquery.js'), NULL, '3.6', true);
     wp_enqueue_script('bootstrapJs', get_theme_file_uri('/js/bootstrap.js'), NULL, '1.0', true);
     wp_enqueue_script('slickJs', get_theme_file_uri('/js/slick.min.js'), NULL, '1.0', true);
     wp_enqueue_script('wowJs', get_theme_file_uri('/js/wow.min.js'), NULL, '1.0', true);
@@ -39,6 +40,7 @@ function scripts()
     wp_enqueue_script('wayPoints', get_theme_file_uri('/js/waypoints-min.js'), NULL, '1.0', true);
     wp_enqueue_script('customJs', get_theme_file_uri('/js/custom.js'), NULL, '1.0', true);
     wp_enqueue_script('searchScript', get_theme_file_uri('/js/search-script.js'), NULL, '1.0', true);
+    wp_enqueue_script('juqerySticky', get_theme_file_uri('/js/jquery.sticky.js'), NULL, '1.0', true);
 }
 
 
@@ -96,4 +98,24 @@ function pageBanner($args = ['title' => null, 'links' => array(), 'photo' => nul
     </div>
 
 <?php
+}
+
+function datetimeFromString($datetime, $newFormat = 'F j, Y g:i A')
+{
+    if ($datetime) {
+
+        $finalDateTime = DateTime::createFromFormat('F j, Y g:i a', $datetime, new DateTimeZone('Asia/Kolkata'));
+
+        return $finalDateTime->format($newFormat);
+    } else {
+        return 'NULL';
+    }
+}
+
+
+function renderMalayalamClass()
+{
+    if(get_field('enable_malayalam')) {
+        echo 'ml';
+    }
 }

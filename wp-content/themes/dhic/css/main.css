@@ -2255,6 +2255,10 @@ button:active {
 .header .kode_navigation_wrap {
   padding: 20px 0 18px;
 }
+
+.header .kode_navigation_wrap.sticky-nav {
+  padding: 10px 0 8px;
+}
 .header .top_logo {
   float: left;
   width: 24%;
@@ -3307,6 +3311,9 @@ button:active {
   padding: 18px 30px 14px;
   background-color: #f4f4f4;
   margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .kode_social_share > a {
   float: left;
@@ -5417,6 +5424,7 @@ figure#admin-block {
   );
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  height: 50%;
 }
 
 #services .box .box-title {
@@ -5445,4 +5453,18 @@ figure#admin-block {
 
 #committee figure.committee-photo img.pull-top {
   top: -50px;
+}
+
+.stickActive {
+  z-index: 9999;
+}
+
+.stickActive .sticky-nav {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.sfsi_widget {
+  min-height: auto;
 }
