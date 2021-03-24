@@ -16,23 +16,7 @@ $month = datetimeFromString(get_field('event_date'), 'M');
         </p>
         <div class="meta">
             <div class="category">
-                <span>
-                    <?php
-                    $categories = get_the_category();
-                    if (is_array($categories) && count($categories) > 0) :
-                    ?>
-                        <i class="fa fa-tag"></i>
-                        <?php foreach ($categories as $cat) :
-                        ?>
-                            <a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->cat_name; ?></a>
-                    <?php
-                            if (count($categories) > 1) :
-                                echo ', ';
-                            endif;
-                        endforeach;
-                    endif;
-                    ?>
-                </span>
+                <?php print_categories(get_the_category()); ?>
             </div>
         </div>
     </div>

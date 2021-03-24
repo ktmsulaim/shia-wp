@@ -72,7 +72,7 @@ pageBanner([
                     <li>
                         <div class="kode_contact_text">
                             <h5><a href="javascript:void(0)">PHONE</a></h5>
-                            <a href="javascript:void(0)"><i class="fa fa-map-marker"></i></a>
+                            <a href="javascript:void(0)"><i class="fa fa-phone"></i></a>
                             <p class="p-2"><span>Landline : +91 497 2796938</span>
                                 Mobile : +91 751 043 2032
                             </p>
@@ -81,7 +81,7 @@ pageBanner([
                     <li>
                         <div class="kode_contact_text">
                             <h5><a href="javascript:void(0)">EMAIL ADDRESS</a></h5>
-                            <a href="javascript:void(0)"><i class="fa fa-map-marker"></i></a>
+                            <a href="javascript:void(0)"><i class="fa fa-envelope"></i></a>
                             <p class="p-2"><span>General : darulhasanath@gmail.com</span>
                                 Office : office@darulhasanath.com
                             </p>
