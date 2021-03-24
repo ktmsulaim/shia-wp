@@ -34,7 +34,7 @@ pageBanner([
                             <div class="kode_portfolio_text">
                                 <h4><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
                                 <div>
-                                    <?php 
+                                    <?php
                                     if (has_excerpt()) :
                                         the_excerpt();
                                     else :
@@ -56,6 +56,19 @@ pageBanner([
             ?>
 
 
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="kode_pagination_list">
+                    <div class="kode_pagination">
+                        <?php echo paginate_links([
+                            'type' => 'list',
+                            'prev_text'    => '<i class="fa fa-arrow-left"></i>Previous',
+                            'next_text'    => 'Next<i class="fa fa-arrow-right"></i>',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

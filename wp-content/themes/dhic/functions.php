@@ -99,7 +99,7 @@ function pageBanner($args = ['title' => null, 'links' => array(), 'photo' => nul
         <!--CONTAINER END-->
     </div>
 
-<?php
+    <?php
 }
 
 function datetimeFromString($datetime, $newFormat = 'F j, Y g:i A')
@@ -120,6 +120,22 @@ function renderMalayalamClass()
     if (get_field('enable_malayalam')) {
         echo 'ml';
     }
+}
+
+function print_categories($categories)
+{
+    if (is_array($categories) && count($categories) > 0) :
+    ?>
+        <i class="fa fa-tag"></i>
+        <?php foreach ($categories as $key => $cat) :
+        ?>
+            <a class="primary-color" href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->cat_name; ?></a>
+<?php
+            if (count($categories) > 1 && $key != count($categories)) :
+                echo ', ';
+            endif;
+        endforeach;
+    endif;
 }
 
 
@@ -143,6 +159,11 @@ function custom_query($query)
                 'value' => date('Ymd'),
                 'type' => 'DATE'
             ]);
+        }
+
+        if ($query->is_search()) {
+            $query->set('post_type', ['post', 'event', 'institute', 'notification']);
+            $query->set('posts_per_page', 5);
         }
     }
 

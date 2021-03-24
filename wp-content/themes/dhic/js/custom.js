@@ -685,4 +685,6 @@ $(document).ready(function () {
             stopText: 'Stop'
         }
     });
+
+    $('[data-toggle="tooltip"]').tooltip();
 });

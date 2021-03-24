@@ -6,8 +6,8 @@ $month = datetimeFromString(get_field('event_date'), 'M');
 <div class="kode_calender_list">
     <span><?php echo $day; ?><i><?php echo $month; ?></i></span>
     <div class="kode_event_text">
-        <h4><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
-        <p style="text-transform:none;">
+        <h4 class="<?php renderMalayalamClass(); ?>"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
+        <p style="text-transform:none;" class="<?php renderMalayalamClass(); ?>">
             <?php if (has_excerpt()) :
                 echo get_the_excerpt();
             else :

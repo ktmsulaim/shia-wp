@@ -28,7 +28,7 @@ pageBanner([
                     <div class="kode_blog_detail_des">
                         <figure class="them_overlay">
                             <?php if (has_post_thumbnail()) : ?>
-                                <img src="<?php echo the_post_thumbnail_url('serviceThumb'); ?>" alt="">
+                                <img src="<?php echo the_post_thumbnail_url('medium_large'); ?>" alt="<?php echo get_the_title(); ?>">
                             <?php else : ?>
                                 <img src="<?php echo get_theme_file_uri('images/placeholder.jpg'); ?>" alt="">
                             <?php endif; ?>
