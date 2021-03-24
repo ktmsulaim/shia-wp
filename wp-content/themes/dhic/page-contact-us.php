@@ -25,6 +25,7 @@ pageBanner([
                         <span><i class="fa fa-circle"></i></span>
                     </div>
                     <form method="post" id="contact-form" class="comment-form">
+                        <div class="container">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="kf_commet_field">
@@ -51,6 +52,7 @@ pageBanner([
 								</div>
                             </div>
                         </div>
+                        </div>
                         <p class="form-submit">
                             <!-- <input name="submit" id="submit-contact" type="button" class="medium_btn background-bg-dark btn_hover mt-4" value="Submit Now"> -->
                             <button name="submit" type="button" id="submit-contact" class="medium_btn theme_color_bg btn_hover2 mt-4">Submit Now</button>
@@ -73,7 +75,7 @@ pageBanner([
                         <div class="kode_contact_text">
                             <h5><a href="javascript:void(0)">PHONE</a></h5>
                             <a href="javascript:void(0)"><i class="fa fa-phone"></i></a>
-                            <p class="p-2"><span>Landline : +91 497 2796938</span>
+                            <p class="p-2"><span class="d-block d-md-inline">Landline : +91 497 2796938</span>
                                 Mobile : +91 751 043 2032
                             </p>
                         </div>
@@ -82,7 +84,7 @@ pageBanner([
                         <div class="kode_contact_text">
                             <h5><a href="javascript:void(0)">EMAIL ADDRESS</a></h5>
                             <a href="javascript:void(0)"><i class="fa fa-envelope"></i></a>
-                            <p class="p-2"><span>General : darulhasanath@gmail.com</span>
+                            <p class="p-2"><span class="d-block d-md-inline">General : darulhasanath@gmail.com</span>
                                 Office : office@darulhasanath.com
                             </p>
                         </div>

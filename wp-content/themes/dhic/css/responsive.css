@@ -569,7 +569,7 @@
 		margin-bottom: 36px;
 	}
 	.widget_event .kode_event_text h6{
-		font-size:11px;
+		font-size:14px;
 	}
 	.widget_social_icon li {
 		margin-bottom: 10px;
@@ -959,8 +959,13 @@
 }
 
 /*============	Media 768Px Start ============ */ 
+@media (max-width: 768px) {
+	.kode_calender_list figure img {
+		width: 100% !important;
+	}
+}
+
 @media (min-width: 768px) and (max-width: 990px) {
-	
 }
 
 /*============ Media 767Px Start ============ */
@@ -1518,6 +1523,45 @@
 	}
 }
 
+@media (max-width: 575px) {
+	.news-box-2 {
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	.news-box-2 .box-image img {
+		display: block;
+		position: static;
+		height: auto;
+	}
+
+	#institutes .institute .institute__title a {
+		font-size: 75%;
+	}
+
+	#institutes .institute .institute__title {
+		padding: 10px 50px;
+	}
+
+	#services .box {
+		height: auto;
+	}
+
+	#services #relief-cell {
+		justify-content: flex-start;
+	}
+
+	#services #relief-cell .box {
+		border: 0;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
+	}
+
+	.kode_view_des h3{
+		font-size: 150%;
+	}
+}
+
 /*============ Media 480Px Star ============ */
 @media (max-width: 480px) {
 	.kode_top_right_text {
@@ -1830,7 +1874,7 @@
 	}
 	/* blog detail page start */
 	.sab_banner_text h2 {
-		font-size: 34px;
+		font-size: 175%;
 	}
 	.kode_blog_detail_text h3 {
 		font-size: 18px;
@@ -1940,6 +1984,7 @@
 	}
 	.kode_event_ticket .medium_btn {
 		margin-left: 0px;
+		display: block;
 	}
 	.kode_event_ticket {
 		padding: 0;

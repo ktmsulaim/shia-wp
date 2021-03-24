@@ -141,7 +141,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="<?php echo esc_url(site_url('/services')) ?>">Services</a></li>
-                                <li><a href="<?php echo esc_url(site_url('/contact-us')); ?>">Institutes</a></li>
+                                <li><a href="<?php echo get_post_type_archive_link('institute'); ?>">Institutes</a></li>
                                 <li><a href="javascript:void(0)">Events</a>
                                     <ul class="dl-submenu">
                                     <li><a href="<?php echo esc_url(site_url('latest-events')); ?>">Latest</a></li>
