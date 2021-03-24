@@ -41,6 +41,8 @@ function scripts()
     wp_enqueue_script('customJs', get_theme_file_uri('/js/custom.js'), NULL, '1.0', true);
     wp_enqueue_script('searchScript', get_theme_file_uri('/js/search-script.js'), NULL, '1.0', true);
     wp_enqueue_script('juqerySticky', get_theme_file_uri('/js/jquery.sticky.js'), NULL, '1.0', true);
+    wp_enqueue_script('juqeryEasyTicker', get_theme_file_uri('/js/jquery.easy-ticker.min.js'), NULL, '1.0', true);
+    wp_enqueue_script('jqueryEasing', get_theme_file_uri('/js/jquery.easing.min.js'), NULL, '1.0', true);
 }
 
 
@@ -48,7 +50,7 @@ add_action('after_setup_theme', 'website_features');
 
 function website_features()
 {
-    add_theme_support('title_tag');
+    add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_image_size('serviceThumb', 400, 260, true);
     add_image_size('slideImage', 1350, 555, true);
@@ -115,7 +117,36 @@ function datetimeFromString($datetime, $newFormat = 'F j, Y g:i A')
 
 function renderMalayalamClass()
 {
-    if(get_field('enable_malayalam')) {
+    if (get_field('enable_malayalam')) {
         echo 'ml';
     }
 }
+
+
+
+function custom_query($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        if (is_post_type_archive('institute')) {
+            $query->set('meta_key', 'order');
+            $query->set('orderby', 'meta_key_num');
+            $query->set('order', 'ASC');
+        }
+
+        if (is_post_type_archive('event')) {
+            $query->set('meta_key', 'event_date');
+            $query->set('orderby', 'meta_value');
+            $query->set('order', 'DESC');
+            $query->set('meta_query', [
+                'key' => 'event_date',
+                'compare' => '<',
+                'value' => date('Ymd'),
+                'type' => 'DATE'
+            ]);
+        }
+    }
+
+    return $query;
+}
+
+add_action('pre_get_posts', 'custom_query');

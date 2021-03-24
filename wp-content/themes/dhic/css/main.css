@@ -3118,7 +3118,7 @@ button:active {
 .kode_pagination_list.navi_2 {
   margin-top: 0px;
 }
-.kode_pagination {
+.kode_pagination_list ul {
   background-color: #eeeeee;
   margin: auto;
   padding: 15px 0;
@@ -3126,27 +3126,35 @@ button:active {
   overflow: hidden;
   width: 390px;
 }
-.kode_pagination li {
+.kode_pagination_list ul
+ li {
   display: inline-block;
 }
-.kode_pagination .next,
-.kode_pagination .prve {
+.kode_pagination_list ul .next,
+.kode_pagination_list ul .prve, 
+.kode_pagination_list ul .prev 
+{
   height: auto;
   width: auto;
 }
-.kode_pagination .next:hover,
-.kode_pagination .prve:hover {
+.kode_pagination_list ul .next:hover,
+.kode_pagination_list ul .prve:hover,
+.kode_pagination_list ul .prev:hover
+ {
   background: none;
 }
-.kode_pagination .next,
-.kode_pagination .next i {
+.kode_pagination_list ul .next,
+.kode_pagination_list ul .next i {
   margin-left: 10px;
 }
-.kode_pagination .prve,
-.kode_pagination .prve i {
+.kode_pagination_list ul .prve,
+.kode_pagination_list ul .prev,
+.kode_pagination_list ul .prve i,
+.kode_pagination_list ul .prev i
+ {
   margin-right: 10px;
 }
-.kode_pagination li a {
+.kode_pagination_list ul li a {
   display: inline-block;
   height: 30px;
   width: 30px;
@@ -3157,6 +3165,11 @@ button:active {
   border-radius: 2px;
   margin-right: 5px;
 }
+
+.kode_pagination_list ul li a.prev, 
+.kode_pagination_list ul li a.next {
+  width: auto;
+} 
 /*
 	=======================================
 		KODE BLOG MADIUM WRAP END
@@ -4497,6 +4510,11 @@ button:active {
 .kode_team_fig .siderbar_categories p {
   margin-bottom: 15px;
 }
+
+.categories_detail li a.active {
+  font-weight: 600;
+}
+
 .kode_team_fig .them_overlay:before {
   opacity: 0;
 }
@@ -5467,4 +5485,42 @@ figure#admin-block {
 
 .sfsi_widget {
   min-height: auto;
+}
+
+.noti-controls {
+  margin-bottom: 8px;
+}
+
+.noti-controls i {
+  color: #d2973b;
+  margin: 0 5px;
+}
+
+.noti-controls i:first-child{
+  margin-left: 0;
+}
+
+.noti-controls .noti-right, .noti-controls .noti-left {
+  cursor: pointer;
+}
+
+.notifications ul li {
+  padding: 10px;
+}
+
+.notifications ul li .noti-title {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.notifications ul li .noti-meta {
+  color: #e1e1e1;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notifications ul li .noti-meta i {
+  margin-right: 5px;
 }

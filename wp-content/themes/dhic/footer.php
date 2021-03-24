@@ -66,24 +66,59 @@
 					</div>
 					<div class="col-md-4">
 						<div class="widget_event">
-							<h4 class="widget_title">Get In Touch</h4>
-							<form method="post" class="comment-form">
-								<div class="kode-left-comment-sec">
-									<div class="kf_commet_field">
-										<input placeholder="Your Name" name="user_name" type="text" value="" data-default="Name*" size="30" required>
-									</div>
-									<div class="kf_commet_field">
-										<input placeholder="Your Email" name="user_email" type="text" value="" data-default="Email*" size="30" required>
-									</div>
-								</div>
-								<div class="kode_textarea">
-									<textarea placeholder="Your Message" name="message"></textarea>
-								</div>
-								<div class="">
-									<div class="g-recaptcha" data-sitekey="6LeN-YYaAAAAAKYR-yUZLdg60Vlx6EVGbpsWn7Nv"></div>
-								</div>
-								<button name="submit" type="button" class="mailSendButton medium_btn bg_transparent border btn_hover mt-4">Submit Now</button>
-							</form>
+							<h4 class="widget_title">Notifications</h4>
+
+							<div class="noti-controls">
+								<span class="noti-left">
+									<i class="fa fa-arrow-left"></i>
+								</span>
+								<span class="noti-right">
+									<i class="fa fa-arrow-right"></i>
+								</span>
+							</div>
+							<div class="notifications">
+								<ul>
+									<?php
+									$notifications = new WP_Query([
+										'post_type' => 'notification',
+										'posts_per_page' => '10',
+									]);
+
+									if ($notifications->have_posts()) :
+										while ($notifications->have_posts()) :
+											$notifications->the_post();
+									?>
+											<li>
+												<div class="noti-title" data-toggle="tooltip" data-text="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>"><?php echo wp_trim_words(get_the_title(), 4); ?></div>
+												<div class="noti-meta">
+													<span class="dateTime"><i class="fa fa-clock-o"></i> <?php echo get_the_date(); ?></span>
+													<span class="category"><i class="fa fa-tag"></i> <?php
+                                                    $categories = get_the_category();
+                                                    if (is_array($categories) && count($categories) > 0) :
+                                                        foreach ($categories as $cat) :
+                                                    ?>
+                                                            <a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->cat_name; ?></a>
+                                                    <?php
+                                                            if (count($categories) > 1) :
+                                                                echo ', ';
+                                                            endif;
+                                                        endforeach;
+                                                    endif;
+                                                    ?></span>
+												</div>
+												<a href="<?php echo get_the_permalink(); ?>">Read more</a>
+											</li>
+										<?php
+										endwhile;
+										wp_reset_query();
+									else :
+										?>
+										<li>No notification!</li>
+									<?php
+									endif;
+									?>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -107,8 +142,7 @@
 	</footer>
 	</div>
 	<!--WRAPER END-->
-	<script type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 	</script>
 	<?php wp_footer(); ?>
 	<script>

@@ -6,9 +6,13 @@ pageBanner([
     'title' => 'Event',
     'links' => [
         '1' => [
-            'label' => 'Event',
-            'url' => get_the_permalink()
-        ]
+            'label' => 'Events',
+            'url' => get_post_type_archive_link('event')
+        ],
+        '2' => [
+            'label' => wp_trim_words(get_the_title(), 5),
+            'url' => 'javascript:void(0)'
+        ] 
     ]
 ]);
 ?>
@@ -25,7 +29,7 @@ pageBanner([
                         <div class="kode_service_des">
                             <figure>
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <img src="<?php echo the_post_thumbnail_url('serviceThumb'); ?>" alt="">
+                                    <img src="<?php echo the_post_thumbnail_url('medium_large'); ?>" alt="">
                                 <?php else : ?>
                                     <img src="<?php echo get_theme_file_uri('images/placeholder.jpg'); ?>" alt="">
                                 <?php endif; ?>

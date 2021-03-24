@@ -114,13 +114,13 @@
                                     <li><a class="<?php echo $page == 'about-us/committee' ? 'active' : ''; ?>" href="<?php echo esc_url(site_url('about-us/committee')); ?>">Committee</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?php echo esc_url(site_url('/services')) ?>">Services</a></li>
-                            <li><a href="<?php echo esc_url(site_url('/institutes')) ?>">Institutes</a></li>
+                            <li><a class="<?php echo $page == 'services' ? 'active' : ''; ?>" href="<?php echo esc_url(site_url('/services')) ?>">Services</a></li>
+                            <li><a class="<?php echo $page == 'institutes' ? 'active' : ''; ?>" href="<?php echo get_post_type_archive_link('institute'); ?>">Institutes</a></li>
                             <li><a href="javascript:void(0)">Events</a>
                                 <ul class="kode">
-                                    <li><a href="blog.html">Latest</a></li>
-                                    <li><a href="blog.html">News</a></li>
-                                    <li><a href="blog01.html">Archive</a></li>
+                                    <li><a href="<?php echo esc_url(site_url('latest-events')); ?>">Latest</a></li>
+                                    <li><a href="<?php echo get_post_type_archive_link('post'); ?>">News</a></li>
+                                    <li><a href="<?php echo get_post_type_archive_link('event'); ?>">Archive</a></li>
                                 </ul>
                             </li>
                             <li><a <?php echo $page == 'gallery' ? 'active' : ''; ?> href="<?php echo esc_url(site_url('/gallery')); ?>">Gallery</a></li>
@@ -141,12 +141,12 @@
                                     </ul>
                                 </li>
                                 <li><a href="<?php echo esc_url(site_url('/services')) ?>">Services</a></li>
-                                <li><a href="<?php echo esc_url(site_url('/institutes')) ?>">Institutes</a></li>
+                                <li><a href="<?php echo esc_url(site_url('/contact-us')); ?>">Institutes</a></li>
                                 <li><a href="javascript:void(0)">Events</a>
                                     <ul class="dl-submenu">
-                                        <li><a href="#">Latest</a></li>
-                                        <li><a href="#">News</a></li>
-                                        <li><a href="#">Archive</a></li>
+                                    <li><a href="<?php echo esc_url(site_url('latest-events')); ?>">Latest</a></li>
+                                    <li><a href="<?php echo get_post_type_archive_link('post'); ?>">News</a></li>
+                                    <li><a href="<?php echo get_post_type_archive_link('event'); ?>">Archive</a></li>
                                     </ul>
                                 </li>
                                 <li><a <?php echo $page == 'gallery' ? 'active' : ''; ?> href="<?php echo esc_url(site_url('/gallery')); ?>">Gallery</a></li>

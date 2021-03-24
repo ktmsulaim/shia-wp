@@ -333,118 +333,41 @@ get_header();
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <?php
+                    $institutes = new WP_Query([
+                        'post_type' => 'institute',
+                        'meta_key' => 'order',
+                        'orderby' => 'meta_key_num',
+                        'order' => 'ASC'
+                    ]);
+                    ?>
                     <div class="gallery">
                         <div id="insti-slider" class="gallery-container">
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/college.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Islamic College</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/yk.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Girls Orphanage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/masjid.jpg'); ?>" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Juma Masjid</span>
+                            <?php
+                            while ($institutes->have_posts()) :
+                                $institutes->the_post();
+                            ?>
+                                <div class="gallery-item">
+                                    <div class="institute">
+                                        <div class="institute__image">
+                                            <?php if (has_post_thumbnail()) : ?>
+                                                <img src="<?php echo the_post_thumbnail_url('serviceThumb'); ?>" alt="<?php echo get_the_title(); ?>" class="img-fluid">
+                                            <?php else : ?>
+                                                <img src="<?php echo get_theme_file_uri('images/placeholder.jpg'); ?>" alt="">
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="institute__title">
+                                            <a href="<?php echo get_the_permalink(); ?>">
+                                                <span><?php echo get_the_title(); ?></span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/hifz.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Hifz College</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/ehs.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>English Medium School</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/admin_block.jpeg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Administrative block</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/college_newblock.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Hasanath new block</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/library.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Hasanath library</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/madrassa.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Islamic Madrasa</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/hmc.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Hasanath Medical Center</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="institute">
-                                    <div class="institute__image">
-                                        <img src="<?php echo get_theme_file_uri('images/institutes/hsp.jpg'); ?>" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="institute__title">
-                                        <span>Hidayathul Swibyan English School</span>
-                                    </div>
-                                </div>
-                            </div>
+
+                            <?php
+                            endwhile;
+                            wp_reset_query();
+                            ?>
                         </div>
                     </div>
                 </div>

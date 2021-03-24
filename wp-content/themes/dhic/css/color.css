@@ -44,9 +44,12 @@
 .kode_social_share > a:hover,
 .kode_blog_detail_text h3 a:hover,
 .categories_detail li a:hover,
+.categories_detail li a.active,
 .kode_pagination .next:hover,
 .kode_pagination .prve:hover,
 .kode_pagination .prve a:hover,
+.kode_pagination .prev:hover,
+.kode_pagination .prev a:hover,
 .kode_pagination .next a:hover,
 .kode_blog_des:hover .kode_blog_text h4 a,
 .kode_client_wrap.client_3 .kode_client_text h6 a:hover,
@@ -98,7 +101,10 @@
 .kode_top_info > ul > li > a:hover,
 .kode_top_info ul li a i, 
 .news-box-2 .box-info .box-info__meta a:hover,
-.news-box-2 .box-info .box-info__title a:hover {
+.news-box-2 .box-info .box-info__title a:hover,
+#institutes .slick-slide.slick-current .institute__title a:hover,
+.notifications ul li a:hover
+{
   color: #d2973b;
 }
 

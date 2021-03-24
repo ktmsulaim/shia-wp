@@ -7,7 +7,11 @@ pageBanner([
     'links' => [
         '1' => [
             'label' => 'News',
-            'url' => get_the_permalink()
+            'url' => get_post_type_archive_link('post'),
+        ],
+        '2' => [
+            'label' => get_the_title(),
+            'url' => 'javascript:void(0)'
         ]
     ]
 ]);
@@ -83,10 +87,6 @@ pageBanner([
 
                         <!--KODE PAGINATION START-->
                         <div class="kode_pagination">
-                            <!-- <a class="prve" href="<?php //echo get_previous_post_link(); 
-                                                        ?>"><i class="fa fa-arrow-left"></i>Previous</a> -->
-                            <!-- <a class="next" href="<?php //echo get_next_post_link(); 
-                                                        ?>">Next<i class="fa fa-arrow-right"></i></a> -->
                             <span class="prve">
                                 <?php
                                 echo get_previous_post_link('%link', '<i class="fa fa-arrow-left"></i>Previous');

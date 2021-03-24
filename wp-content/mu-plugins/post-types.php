@@ -35,6 +35,47 @@ function postTypes()
         ],
         'menu_icon' => 'dashicons-format-aside',
     ]);
+    
+    register_post_type('institute', [
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'hierarchical' => true,
+        'labels' => [
+            'name' => 'Institutes',
+            'add_new_item' => 'Add new institute',
+            'edit_item' => 'Edit institute',
+            'all_items' => 'All institutes',
+            'not_found' => 'No institutes found!',
+            'singular_name' => 'Institute',
+        ],
+        'menu_icon' => 'dashicons-bank',
+        'rewrite' => [
+            'slug' => 'institutes'
+        ]
+    ]);
+
+    register_post_type('notification', [
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'excerpt'],
+        'taxonomies' => ['category'],
+        'hierarchical' => true,
+        'labels' => [
+            'name' => 'Notifications',
+            'add_new_item' => 'Add new notification',
+            'edit_item' => 'Edit notification',
+            'all_items' => 'All notifications',
+            'not_found' => 'No notifications found!',
+            'singular_name' => 'Notification',
+        ],
+        'menu_icon' => 'dashicons-bell',
+        'rewrite' => [
+            'slug' => 'notifications'
+        ]
+    ]);
 }
 
 add_action('init', 'postTypes');

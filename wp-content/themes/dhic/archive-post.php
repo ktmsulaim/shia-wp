@@ -1,1 +1,0 @@
-<h1>All news are here!</h1>
