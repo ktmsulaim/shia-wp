@@ -2258,6 +2258,7 @@ button:active {
 
 .header .kode_navigation_wrap.sticky-nav {
   padding: 10px 0 8px;
+  z-index: 99999 !important;
 }
 .header .top_logo {
   float: left;
@@ -5474,7 +5475,7 @@ figure#admin-block {
 }
 
 .stickActive {
-  z-index: 9999;
+  z-index: 9999 !important;
 }
 
 .stickActive .sticky-nav {
