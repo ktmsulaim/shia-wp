@@ -93,18 +93,18 @@
 												<div class="noti-meta">
 													<span class="dateTime"><i class="fa fa-clock-o"></i> <?php echo get_the_date(); ?></span>
 													<span class="category"><i class="fa fa-tag"></i> <?php
-                                                    $categories = get_the_category();
-                                                    if (is_array($categories) && count($categories) > 0) :
-                                                        foreach ($categories as $cat) :
-                                                    ?>
-                                                            <a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->cat_name; ?></a>
-                                                    <?php
-                                                            if (count($categories) > 1) :
-                                                                echo ', ';
-                                                            endif;
-                                                        endforeach;
-                                                    endif;
-                                                    ?></span>
+																										$categories = get_the_category();
+																										if (is_array($categories) && count($categories) > 0) :
+																											foreach ($categories as $cat) :
+																										?>
+																<a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->cat_name; ?></a>
+														<?php
+																												if (count($categories) > 1) :
+																													echo ', ';
+																												endif;
+																											endforeach;
+																										endif;
+														?></span>
 												</div>
 												<a href="<?php echo get_the_permalink(); ?>">Read more</a>
 											</li>
@@ -151,6 +151,22 @@
 			$('.loader').fadeOut();
 		});
 	</script>
+
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {},
+			Tawk_LoadStart = new Date();
+		(function() {
+			var s1 = document.createElement("script"),
+				s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/605c5a11067c2605c0bc18c1/1f1kbvln7';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 	</body>
 
 	</html>
