@@ -15,6 +15,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <meta name="theme-color" content="#d2973b">
+    <meta name="google-site-verification" content="I_zTVEYYay0UJ2H6v1jF-LHdbOvyylIjCgevUyCJhCY" />
 </head>
 
 <body <?php body_class(); ?>>
