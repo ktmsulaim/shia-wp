@@ -95,8 +95,10 @@ pageBanner([
                 <?php the_content(); ?>
             </div>
         </div>
-        <?php if (get_field('category')) : ?>
-            <hr>
+        <?php 
+        if (get_field('category')) : 
+            echo '<hr>';    
+        ?>
             <div class="row">
                 <div class="col-md-8">
                     <h4 class="sidebar_title">Recent news</h4>
@@ -146,16 +148,17 @@ pageBanner([
                         <?php
                             endwhile;
                             wp_reset_query();
-                            echo '</div>';
+                        ?>
+                        </div>
+                        <?php
                         else :
                             echo '<p>No recent news!</p>';
                         endif;
                         ?>
-                        </div>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="sidebar_title">Upcoming events</h4>
-                    <?php
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="sidebar_title">Upcoming events</h4>
+                        <?php
                         $today = date('Ymd');
                         $events = new WP_Query([
                             'posts_per_page' => 3,
@@ -171,30 +174,30 @@ pageBanner([
                                 'type' => 'DATE',
                             ]
                         ]);
-
-                        if($events->have_posts()):
+    
+                        if ($events->have_posts()) :
                         ?>
                             <ul class="kode_calender_detail detail_2">
-                                    <?php
-                                    while ($events->have_posts()) :
-                                        $events->the_post();
-                                    ?>
-                                        <li>
-                                            <?php
-                                            get_template_part('template-parts/content', 'event');
-                                            ?>
-                                        </li>
-                                    <?php
-                                    endwhile;
-                                    ?>
-                                </ul>
+                                <?php
+                                while ($events->have_posts()) :
+                                    $events->the_post();
+                                ?>
+                                    <li>
+                                        <?php
+                                        get_template_part('template-parts/content', 'event');
+                                        ?>
+                                    </li>
+                                <?php
+                                endwhile;
+                                ?>
+                            </ul>
                         <?php
                             wp_reset_query();
-                        else:
+                        else :
                             echo '<p>No upcoming events!</p>';
                         endif;
-                    ?>
-                </div>
+                        ?>
+                    </div>
             </div>
         <?php endif; ?>
     </div>
