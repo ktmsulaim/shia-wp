@@ -75,8 +75,9 @@ pageBanner([
                         <div class="kode_contact_text">
                             <h5><a href="javascript:void(0)">PHONE</a></h5>
                             <a href="javascript:void(0)"><i class="fa fa-phone"></i></a>
-                            <p class="p-2"><span class="d-block d-md-inline">Landline : +91 497 2796938</span>
-                                Mobile : +91 751 043 2032
+                            <p class="p-2"><span class="d-block d-md-inline">Landline : +91 497 2797032</span>
+                                <span>Landline : +91 497 2796938</span>
+                                Mobile : +91 99616 92628
                             </p>
                         </div>
                     </li>

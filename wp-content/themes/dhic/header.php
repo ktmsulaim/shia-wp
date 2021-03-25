@@ -46,7 +46,7 @@
                                 </li>
                                 <li>
                                     <span><i class="fa fa-phone"></i>Contact No</span>
-                                    <a href="tel:+914972796938">+91 497 2796938</a>
+                                    <a href="tel:+914972796938">+91 497 2797032</a>
                                 </li>
                                 <li>
                                     <span><i class="fa fa-calendar"></i>Office Timings</span>
