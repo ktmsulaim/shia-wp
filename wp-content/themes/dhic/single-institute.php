@@ -146,7 +146,7 @@ pageBanner([
                         <?php
                             endwhile;
                             wp_reset_query();
-                            echo '</di>';
+                            echo '</div>';
                         else :
                             echo '<p>No recent news!</p>';
                         endif;
