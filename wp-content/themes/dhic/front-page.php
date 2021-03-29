@@ -13,7 +13,7 @@ get_header();
             while ($slides->have_posts()) :
                 $slides->the_post();
 
-                if (get_field('image')) :
+                if (get_field('image') || has_post_thumbnail()) :
         ?>
 
                     <div>
@@ -22,7 +22,7 @@ get_header();
                                 <a href="<?php the_field('link'); ?>">
                                 <?php endif; ?>
                                 <figure title="<?php echo get_field('description') ?? ''; ?>" class="them_overlay">
-                                    <img src="<?php echo get_field('image')['sizes']['slideImage']; ?>" alt="<?php the_title(); ?>">
+                                    <img src="<?php echo get_field('image') ? get_field('image')['sizes']['slideImage'] : the_post_thumbnail_url('slideImage'); ?>" alt="<?php the_title(); ?>">
                                 </figure>
                                 <?php if (get_field('link')) : ?>
                                 </a>

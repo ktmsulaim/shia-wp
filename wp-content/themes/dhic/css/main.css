@@ -5423,6 +5423,7 @@ figure#admin-block {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
 }
 
 #services #hajj-cell {
@@ -5444,6 +5445,23 @@ figure#admin-block {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   height: 50%;
+  top: 1450px;
+  transition: all .3s ease-out;
+}
+
+#relief-cell:hover .box, #hajj-cell:hover .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  border-radius: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  background-image: linear-gradient( rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90) );
 }
 
 #services .box .box-title {
