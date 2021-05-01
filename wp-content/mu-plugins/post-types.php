@@ -18,50 +18,11 @@ function postTypes()
         'menu_icon' => 'dashicons-images-alt'
     ]);
 
-    register_post_type('event', [
-        'public' => true,
-        'has_archive' => true,
-        'show_in_rest' => true,
-        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
-        'taxonomies' => ['category'],
-        'hierarchical' => true,
-        'labels' => [
-            'name' => 'Events',
-            'add_new_item' => 'Add new event',
-            'edit_item' => 'Edit event',
-            'all_items' => 'All events',
-            'not_found' => 'No events found!',
-            'singular_name' => 'Event',
-        ],
-        'menu_icon' => 'dashicons-format-aside',
-    ]);
-    
-    register_post_type('institute', [
-        'public' => true,
-        'has_archive' => true,
-        'show_in_rest' => true,
-        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
-        'hierarchical' => true,
-        'labels' => [
-            'name' => 'Institutes',
-            'add_new_item' => 'Add new institute',
-            'edit_item' => 'Edit institute',
-            'all_items' => 'All institutes',
-            'not_found' => 'No institutes found!',
-            'singular_name' => 'Institute',
-        ],
-        'menu_icon' => 'dashicons-bank',
-        'rewrite' => [
-            'slug' => 'institutes'
-        ]
-    ]);
-
     register_post_type('notification', [
         'public' => true,
         'has_archive' => true,
         'show_in_rest' => true,
         'supports' => ['title', 'editor', 'excerpt'],
-        'taxonomies' => ['category'],
         'hierarchical' => true,
         'labels' => [
             'name' => 'Notifications',
