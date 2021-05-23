@@ -37,6 +37,27 @@ function postTypes()
             'slug' => 'notifications'
         ]
     ]);
+
+    register_post_type('artwork', [
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
+        'hierarchical' => true,
+        'taxonomies'  => ['category'],
+        'labels' => [
+            'name' => 'Artworks',
+            'add_new_item' => 'Add new artwork',
+            'edit_item' => 'Edit artwork',
+            'all_items' => 'All artworks',
+            'not_found' => 'No artworks found!',
+            'singular_name' => 'Artwork',
+        ],
+        'menu_icon' => 'dashicons-editor-paste-word',
+        'rewrite' => [
+            'slug' => 'artworks'
+        ]
+    ]);
 }
 
 add_action('init', 'postTypes');
