@@ -6,7 +6,7 @@ function postTypes()
         'public' => true,
         'has_archive' => false,
         'show_in_rest' => false,
-        'supports' => ['title', 'thumbnail'],
+        'supports' => ['title'],
         'labels' => [
             'name' => 'Slides',
             'add_new_item' => 'Add new slide',
