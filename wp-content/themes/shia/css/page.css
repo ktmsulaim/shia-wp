@@ -1,0 +1,323 @@
+.header-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 35vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-box .title {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 8px darkgrey;
+}
+
+.header#secondary {
+    background-size: cover;
+    background-position: bottom 30% center;
+    background-repeat: no-repeat;
+}
+
+.breadcrumb-wrapper {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, .45);
+    border-radius: 35px;
+    margin-top: 10px;
+}
+
+.breadcrumb-wrapper .breadcrumb {
+    margin: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin: 0 5px;
+}
+
+/* 
+* -----------------------------------------
+*  Transition
+* -----------------------------------------
+*/
+span#search-label,
+button#searchSubmit,
+.wpb_page_list li a,
+ul.overview-sections li a {
+    transition: all 0.5s;
+}
+
+.content {
+    padding: 0 20px;
+}
+
+.content p {
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.content ol {
+    list-style: decimal;
+    padding-left: 25px;
+}
+
+
+.side-bar {
+    background: #f5f5f5;
+    padding: 21px;
+}
+
+.widget .widget-title h4 {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.widget {
+    margin-bottom: 15px;
+}
+
+.widget-title {
+    margin-bottom: 12px;
+}
+
+/**
+* Search
+*/
+form#search-form input {
+    border: 0;
+    border-radius: 0;
+}
+
+button#searchSubmit {
+    border: none;
+    background: none;
+    outline: none;
+    display: block;
+    padding: 0.375rem 0.75rem;
+}
+
+span#search-label {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+span#search-label:hover {
+    background-color: #18a773;
+}
+
+span#search-label:hover button#searchSubmit {
+    color: #fff;
+}
+
+
+/*
+* Search result page
+*/
+ul#search-category-tab {
+    background: #fff;
+}
+
+ul#search-category-tab li a {
+    padding: 15px;
+    border-radius: 0;
+    border-right: 3px solid transparent;
+}
+
+ul#search-category-tab li a .mdi {
+    margin-right: 15px;
+}
+
+ul#search-category-tab li a.active {
+    background-color: #f4f5f7;
+    color: #18a773;
+    border-color: #18a773;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #18a773;
+}
+
+ul.artworks-list .artwork-box {
+    display: flex;
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    transition: all 0.5s;
+}
+
+ul.artworks-list .artwork-box:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+ul.artworks-list .artwork-box .artwork-box__image {
+    flex: 1;
+    display: flex;
+}
+
+ul.artworks-list .artwork-box .artwork-box__image img {
+    object-fit: cover;
+}
+
+ul.artworks-list .artwork-box .artwork-box__data {
+    flex: 3;
+    padding: 10px;
+}
+
+ul.artworks-list .artwork-box .artwork-box__data .category-names {
+    margin: 5px 0;
+}
+
+
+ul.artworks-list .artwork-box .artwork-box__data .category-names a {
+    padding: 3px 6px;
+    font-size: 0.85rem;
+    background: #877d4c;
+    color: #fff;
+    border-radius: 8px;
+}
+
+ul.artworks-list .artwork-box .artwork-box__data .author {
+    display: flex;
+    margin-top: 5px;
+}
+
+ul.artworks-list .artwork-box .artwork-box__data .author .author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+ul.artworks-list .artwork-box .artwork-box__data .author .author-image img {
+    width: 50px;
+}
+
+ul.artworks-list .artwork-box .artwork-box__data .author .author-name {
+    padding-left: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.wpb_page_list li a {
+    display: block;
+    padding: 15px;
+    background: #fff;
+    border-right: 5px solid #18a773;
+}
+
+.wpb_page_list li a:hover {
+    background-color: #18a773;
+    color: #fff;
+}
+
+.about-contents {
+    margin-top: 15px;
+}
+
+ul.overview-sections li a {
+    display: block;
+    padding: 15px;
+    background: #f9f9f9;
+}
+ul.overview-sections li a.active {
+    border-right: 5px solid #877d4c;
+}
+
+ul.overview-sections li a:hover {
+    background-color: #877d4c;
+    color: #fff;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 9999;
+}
+
+/*
+*
+* Title on image on secondary page
+*/
+.text-on-image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.text-on-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(1deg , black -2%, transparent);
+    z-index: 1;
+}
+
+.text-on-image .text {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    color: #fff;
+    z-index: 2;
+    font-size: 2rem;
+}
+
+
+/*
+* Facilities page
+*/
+
+.facility-box {
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    transition: all .5s;
+    height: 100%;
+}
+
+.facility-box:hover {
+    background-color: #e1e1e1;
+}
+
+.facility-box .icon {
+    font-size: 3.5rem;
+    color: #888;
+}
+
+.facility-box:hover .icon {
+    color: #18a773;
+}
+
+/*
+* Contact page
+*/
+
+.contact-box {
+    display: flex;
+    background: #f9f9f9;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.contact-box .icon {
+    flex: 1;
+    text-align: center;
+    align-self: center;
+    font-size: 2.5rem;
+    color: #877d4c;
+    padding-left: 15px;
+}
+
+.contact-box .contact-details {
+    padding: 15px;
+    flex: 5;
+}
+
+.contact-box .contact-details .title, .contact-box .contact-details b {
+    margin-bottom: 10px;
+}
