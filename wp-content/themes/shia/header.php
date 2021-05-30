@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="d-flex justify-content-end">
+                        <div id="header-email-social" class="d-flex justify-content-end">
                             <div class="mx-2">
                                 <a href="mailto:shamsulhudaacademy@yahoo.com">
                                     <span class="icon mdi mdi-email"></span>
@@ -110,14 +110,16 @@
                             <li class="<?php echo is_active('/contact-us/'); ?>"><a href="<?php echo esc_url(site_url('/contact-us')); ?>">Contact us</a></li>
                         </ul>
                     </div>
-                    <div class="search">
-                        <span id="searchTrigger" class="mdi mdi-magnify"></span>
+                    <div id="search-mobile-nav">
+                        <div class="search">
+                            <span id="searchTrigger" class="mdi mdi-magnify"></span>
 
-                        <div id="searchFormWrapper" class="search-form">
-                            <form id="searchForm" action="<?php echo esc_url(site_url('/')); ?>" method="get">
-                                <input type="text" name="s" class="header-search-input mousetrap" placeholder="Search here..." required>
-                                <span class="close-button mdi mdi-close" id="searchFormClose"></span>
-                            </form>
+                            <div id="searchFormWrapper" class="search-form">
+                                <form id="searchForm" action="<?php echo esc_url(site_url('/')); ?>" method="get">
+                                    <input type="text" name="s" class="header-search-input mousetrap" placeholder="Search here..." required>
+                                    <span class="close-button mdi mdi-close" id="searchFormClose"></span>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

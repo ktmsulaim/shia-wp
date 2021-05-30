@@ -1,16 +1,22 @@
 $(function () {
     $('.slider').slick({
-        dots: true,
         infinite: true,
         speed: 600,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        // variableWidth: true,
-        // variableHeight: true,
-        // centerMode: true,
-        // adaptiveHeight: true,
+        mobileFirst:true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                  dots: true,
+                  arrows: true,
+                }
+            }
+        ]
     })
 
     /**
@@ -189,12 +195,16 @@ $(function () {
         }
 
         if(!$('#navWrapper .mobile-nav-wrapper').length) {
-            $('#navWrapper').append(`<div class="mobile-nav-wrapper">
+            $('#navWrapper #search-mobile-nav').append(`<div class="mobile-nav-wrapper">
                 <span id="mobile-menu-toggle" class="mdi mdi-menu"></span>
             </div>`);
 
             if(!$('#navWrapper .mobile-nav-wrapper .dropdown-items').length) {
                 $('#navWrapper .mobile-nav-wrapper').append(menuList);
+            }
+
+            if(!$('#search-mobile-nav').hasClass('d-flex')) {
+                $('#search-mobile-nav').addClass('d-flex');
             }
 
             var mobileMenu = $('#navWrapper .mobile-nav-wrapper .dropdown-items');
@@ -286,6 +296,22 @@ $(function () {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 786,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     })
     
     /**
@@ -303,6 +329,15 @@ $(function () {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 568,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     })
     
     /**
