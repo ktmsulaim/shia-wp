@@ -1,0 +1,76 @@
+<?php
+
+get_header();
+
+pageHeader([
+    'title' => 'Creative Frame',
+    'breadcrumb' => [
+        0 => [
+            'label' => 'Category name',
+            'url' => '#'
+        ]
+    ],
+    'page_banner' => get_theme_file_uri('/img/banner-art.jpg'),
+]);
+
+?>
+<section id="single-artwork" class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="box">
+                    <?php
+                    if (has_post_thumbnail()) :
+                    ?>
+                        <div class="post-image">
+                            <img src="<?php echo post_image('large'); ?>" class="img-fluid" alt="Artwork">
+                        </div>
+                    <?php
+                    endif;
+                    ?>
+
+                    <div class="post-title">
+                        <h4><?php echo get_the_title(); ?></h4>
+                    </div>
+
+                    <div class="post-meta">
+                        <ul class="meta-list">
+                            <li>
+                                <span class="mdi mdi-clock-outline"></span>
+                                <span><?php echo get_the_date('F d, Y'); ?></span>
+                            </li>
+                            <li>
+                                <span class="mdi mdi-tag-outline"></span>
+                                <span><?php the_category(', '); ?></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="content">
+                        <?php echo get_the_content(); ?>
+                    </div>
+
+                    <div class="author">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box h-auto">
+                    <h4 class="title-2 mb-2">Author</h4>
+
+                    <div class="text-center">
+                        <div class="author-image mb-2">
+                            <?php student_author_image(150); ?>
+                        </div>
+                        <div class="author-name">
+                            <p><?php echo get_field('author_name'); ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
+get_footer();

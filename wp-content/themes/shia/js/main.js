@@ -259,8 +259,8 @@ $(function () {
         visible: 4,
         mousePause: true,
         controls: {
-            up: '',
-            down: '',
+            up: '.next',
+            down: '.prev',
             toggle: '',
             playText: 'Play',
             stopText: 'Stop'

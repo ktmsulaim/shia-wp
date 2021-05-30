@@ -38,6 +38,7 @@
 *  Transition
 * -----------------------------------------
 */
+
 span#search-label,
 button#searchSubmit,
 .wpb_page_list li a,
@@ -320,4 +321,72 @@ ul.overview-sections li a:hover {
 
 .contact-box .contact-details .title, .contact-box .contact-details b {
     margin-bottom: 10px;
+}
+
+
+/**
+* News in detail page
+**/
+
+.post-thumbnail img {
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-size: 2.0rem;
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.post-meta ul.meta-list {
+    display: flex;
+}
+
+.post-meta ul.meta-list li {
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.post-meta ul.meta-list li span.mdi {
+    margin-right: 5px;
+}
+
+.post-meta ul.meta-list li:not(:last-child) {
+    border-right: 1px solid #e1e1e1;
+}
+
+/**
+* Notifications page
+**/
+
+.notification-wrapper .prev, .notification-wrapper .next {
+    font-size: 1.5rem;
+    color: #877d4d;
+    cursor: pointer;
+}
+
+
+/* 
+* -----------------------------------------
+* Artwork page
+* -----------------------------------------
+*/
+section#single-artwork .box .post-image {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+section#single-artwork .box .post-image img {
+    border-radius: 8px;
+}
+
+section#single-artwork .box .post-title {
+    text-align: center;
 }

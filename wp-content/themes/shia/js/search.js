@@ -39,10 +39,10 @@ $(function(){
         e.stopImmediatePropagation();
         
         searchFormWrapper.animate({'top': '-100px'}, 400, 'swing', function(){
+            mainNav.css({'overflow':'unset'});
             $(this).hide();
         });
-
-        mainNav.css({'overflow':'unset'});
+        
         isOpen = false;
     }
 

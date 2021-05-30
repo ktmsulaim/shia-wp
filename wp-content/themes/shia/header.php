@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between" id="navWrapper">
                     <div class="logo p-2">
-                        <img src="<?php echo get_theme_file_uri('img/logo.png') ?>" width="80" alt="">
+                        <img class="go-to-url" data-target="<?php echo esc_url(site_url('/')); ?>" src="<?php echo get_theme_file_uri('img/logo.png') ?>" width="80" alt="">
                     </div>
                     <div class="menu">
                         <ul class="dropdown-items">
@@ -101,8 +101,8 @@
                                     <li>
                                         <a class="scrollTo" data-target="#creative-frame-section" href="<?php echo esc_url(site_url('/students-corner#creative-frame-section')); ?>">Creative Frame</a>
                                         <ul class="menu-items animated faster sub">
-                                            <li><a href="#">Articles</a></li>
-                                            <li><a href="#">Culture</a></li>
+                                            <li><a href="<?php echo get_category_link(get_cat_ID('articles')); ?>">Articles</a></li>
+                                            <li><a href="<?php echo get_category_link(get_cat_ID('culture')); ?>">Culture</a></li>
                                         </ul>
                                     </li>
                                 </ul>

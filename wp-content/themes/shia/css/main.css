@@ -258,9 +258,6 @@ ul.menu-items {
 *   Search
 * --------------------------------------------
 */
-#main-nav {
-    /* overflow: hidden; */
-}
 
 #main-nav .search {
     display: flex;
@@ -401,6 +398,7 @@ ul.menu-items {
     padding: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
     border-radius: 12px;
+    height: 100%;
 }
 
 .box-1 {
@@ -420,6 +418,9 @@ ul.menu-items {
     position: relative;
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .box-3 .box-categories {
@@ -649,6 +650,38 @@ button.accordion-button {
     color: #18a773;
 }
 
+
+.news-box.news-box-3 {
+    margin-bottom: 15px;
+    background: #fff;
+    display: flex;
+}
+
+.news-box-3 .news-box-data {
+    flex: 4;
+    padding: 10px;
+}
+
+.news-box-3 .news-box-image {
+    flex: 2;
+    display: flex;
+    margin: -15px 0 -15px -15px;
+}
+
+.news-box-3 .news-box-image img {
+    object-fit: cover;
+}
+
+.news-box .news-box-meta span.date-text {
+    font-size: .80rem;
+    color: #888;
+    transition: all .5s;
+}
+
+.news-box:hover .news-box-meta .date-text {
+    color: #18a773;
+}
+
 /**
 * ---------------------------------------------------------------
 * Notifications
@@ -754,6 +787,31 @@ section#mission-and-vision #blockImage {
     background: linear-gradient(0deg, black, transparent);
 }
 
+
+/**
+* ---------------------------------------------------------------
+* Pagination
+* ---------------------------------------------------------------
+*/
+
+.pagination {
+    margin-top: 20px;
+}
+
+
+.page-item.active .page-link {
+    background-color: #18a773;
+    border-color: #18a773;
+}
+
+.page-link {
+    color: #18a773;
+}
+
+.page-link:hover, .page-link:focus {
+    color: #877d4c;
+    box-shadow: none;
+}
 
 /**
 * ---------------------------------------------------------------

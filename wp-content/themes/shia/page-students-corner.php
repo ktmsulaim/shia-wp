@@ -88,7 +88,7 @@ pageHeader([
                                     <span class="mdi mdi-text-box-outline"></span>
                                 </div>
                                 <div class="title">
-                                    <a href="javascript:void(0)">Articles</a>
+                                    <a href="<?php echo get_category_link(get_cat_ID('articles')); ?>">Articles</a>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ pageHeader([
                                     <span class="mdi mdi-account-group-outline"></span>
                                 </div>
                                 <div class="title">
-                                    <a href="javascript:void(0)">Culture</a>
+                                    <a href="<?php echo get_category_link(get_cat_ID('culture')); ?>">Culture</a>
                                 </div>
                             </div>
                         </div>

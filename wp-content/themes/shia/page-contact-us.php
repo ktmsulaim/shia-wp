@@ -28,10 +28,17 @@ pageHeader([
                             <p>Run by: Kuttikkattoor Muslim orphanage committee </p>
                             <p>Kuttikkattoor (po), Calicut- 673008, Kerala, India </p>
                         </div>
+
+                        <div class="mt-4" id="phone-numbers">
+                            <h4 class="title-1 mb-4">Call us</h4>
+                            <p><a href="+914952965145">04952965145</a></p>
+                            <p><a href="+918281536145">8281536145</a></p>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div id="map">
                             <h4 class="title-1 mb-4">Locate us</h4>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.8985273833223!2d75.87281701480525!3d11.268869091988506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b60969f305d%3A0xe87aa023476aa15b!2sShamsul%20Huda%20Islamic%20Academy%20Kuttikkattoor!5e0!3m2!1sen!2sin!4v1622268441265!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
