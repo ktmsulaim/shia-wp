@@ -37,7 +37,7 @@ $author_name = get_the_author_meta( 'display_name', $author_id );
                 <div class="post-thumbnail">
                     <img src="<?php echo post_image('large'); ?>" alt="" class="img-fluid">
                 </div>
-                <div class="post-title">
+                <div class="post-title <?php echo get_language_class(); ?>">
                     <?php echo get_the_title(); ?>
                 </div>
                 <div class="post-meta">
@@ -57,7 +57,7 @@ $author_name = get_the_author_meta( 'display_name', $author_id );
                     </ul>
                 </div>
 
-                <div class="content">
+                <div class="content <?php echo get_language_class(); ?>">
                     <?php echo get_the_content(); ?>
                 </div>
                 <div class="share-button mt-5" data-text="<?php echo get_the_title(); ?>" data-url="<?php echo get_the_permalink(); ?>" data-text="<?php echo short_content(); ?>"></div>

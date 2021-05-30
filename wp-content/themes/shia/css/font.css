@@ -63,3 +63,62 @@
     font-style: italic;
 }
 
+/*
+* -----------------------------------------------------------------
+*  Rachana Malayalam
+* -----------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'Rachana';
+    src: url('../fonts/Rachana/RIT-Rachana-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rachana';
+    src: url('../fonts/Rachana/RIT-Rachana-Bold.ttf');
+    font-weight: bold;
+}
+
+.ml, .ml * {
+    font-family: 'Rachana', 'Lato', 'sans-serif' !important;
+}
+
+/*
+* -----------------------------------------------------------------
+*  Droid Kufi Arabic
+* -----------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'DroidKufi';
+    src: url('../fonts/Droid-Kufi/DroidKufi-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'DroidKufi';
+    src: url('../fonts/Droid-Kufi/DroidKufi-Bold.ttf');
+    font-weight: bold;
+}
+
+.ar, .ar * {
+    font-family: 'DroidKufi', 'Lato', 'sans-serif' !important;
+}
+
+/*
+* -----------------------------------------------------------------
+*  Noto Nastaliq Urdu
+* -----------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'NotoNastaliqUrdu';
+    src: url('../fonts/Noto-Urdu/NotoNastaliqUrdu-Regular.ttf');
+    font-weight: 400;
+}
+
+.ur, .ur * {
+    font-family: 'NotoNastaliqUrdu', 'Lato', 'sans-serif' !important;
+}

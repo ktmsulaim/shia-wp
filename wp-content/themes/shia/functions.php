@@ -109,7 +109,7 @@ function pageHeader(array $attributes = ['title' => null, 'page_banner' => null,
             <div class="row">
                 <div class="col">
                     <div class="header-box">
-                        <div class="title"><?php echo $attributes['title']; ?></div>
+                        <div class="title <?php echo get_language_class(); ?>"><?php echo $attributes['title']; ?></div>
                         <div class="breadcrumb-wrapper">
                             <ul class="breadcrumb">
                                 <li><a href="<?php echo esc_url(site_url('/')); ?>">Home</a></li>
@@ -316,4 +316,19 @@ function creative_frame_template($template) {
     }
 
     return $template;
+}
+
+function get_language_class() {
+    $enable = get_field('enable_language_support');
+    $lang = get_field('language');
+
+    if($enable && $lang) {
+        if($lang == 'Arabic') {
+            return 'ar';
+        } elseif($lang == 'Malayalam') {
+            return 'ml';
+        } elseif($lang == 'Urdu') {
+            return 'ur';
+        }
+    }
 }

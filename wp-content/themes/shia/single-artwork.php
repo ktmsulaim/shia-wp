@@ -29,7 +29,7 @@ pageHeader([
                     endif;
                     ?>
 
-                    <div class="post-title">
+                    <div class="post-title <?php echo get_language_class(); ?>">
                         <h4><?php echo get_the_title(); ?></h4>
                     </div>
 
@@ -46,7 +46,7 @@ pageHeader([
                         </ul>
                     </div>
 
-                    <div class="content">
+                    <div class="content <?php echo get_language_class(); ?>">
                         <?php echo get_the_content(); ?>
                     </div>
 
@@ -63,7 +63,7 @@ pageHeader([
                         <div class="author-image mb-2">
                             <?php student_author_image(150); ?>
                         </div>
-                        <div class="author-name">
+                        <div class="author-name <?php echo get_language_class(); ?>">
                             <p><?php echo get_field('author_name'); ?></p>
                         </div>
                     </div>

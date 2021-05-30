@@ -1,6 +1,6 @@
 <li class="notification">
     <a href="<?php echo get_the_permalink(); ?>">
-    <div class="notification-title">
+    <div class="notification-title <?php echo get_language_class(); ?>">
         <?php the_title(); ?>
     </div>
     <div class="notification-date">
