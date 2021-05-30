@@ -117,8 +117,12 @@ span#mobile-menu-toggle {
     .side-bar {
         margin-bottom: 15px;
     }
+   
+    .header-box .title {
+        font-size: 2rem;
+    }
 
-    .text-on-image .text {
+    .text-on-image .text, .post-title {
         font-size: 1.25rem;
     }
 
