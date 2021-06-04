@@ -53,6 +53,12 @@ $artworks = new WP_Query([
     's' => $q,
 ]);
 
+$downloads = new WP_Query([
+    'post_type' => 'download',
+    'posts_per_page' => 5,
+    's' => $q
+]);
+
 ?>
 <section class="section bg-light">
     <div class="container">
@@ -231,6 +237,27 @@ $artworks = new WP_Query([
                                         wp_reset_query();
                                     else :
                                         no_data('data', 100);
+                                    endif;
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="box box-3">
+                                    <div class="title">
+                                        <h4 class="title-1 mb-4 text-center">Downloads</h4>
+                                    </div>
+
+                                    <?php
+                                    if ($downloads->have_posts()) :
+                                        echo '<ul class="downloads-list">';
+                                        while ($downloads->have_posts()) :
+                                            $downloads->the_post();
+                                            get_template_part('template-parts/single', 'download-list');
+                                        endwhile;
+                                        echo '</ul>';
+                                        wp_reset_query();
+                                    else :
+                                        no_data('downloads', 100);
                                     endif;
                                     ?>
                                 </div>

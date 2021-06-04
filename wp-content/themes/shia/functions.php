@@ -167,9 +167,10 @@ function get_child_pages()
     return $string;
 }
 
-if(!function_exists('has_sibling')) {
-    function has_sibling($parent) {
-        if(!$parent): 
+if (!function_exists('has_sibling')) {
+    function has_sibling($parent)
+    {
+        if (!$parent) :
             return;
         endif;
 
@@ -183,9 +184,10 @@ if(!function_exists('has_sibling')) {
     }
 }
 
-if(!function_exists('get_sibling')) {
-    function get_sibling($parent) {
-        if(!$parent): 
+if (!function_exists('get_sibling')) {
+    function get_sibling($parent)
+    {
+        if (!$parent) :
             return;
         endif;
 
@@ -202,7 +204,7 @@ if (!function_exists('has_page_parent')) {
     {
         global $post;
 
-        if($post->post_parent) {
+        if ($post->post_parent) {
             return get_post($post->post_parent);
         }
 
@@ -217,8 +219,9 @@ if (!function_exists('get_page_parent')) {
     }
 }
 
-function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params = [] ) {
-    if ( null === $wp_query ) {
+function bootstrap_pagination(\WP_Query $wp_query = null, $echo = true, $params = [])
+{
+    if (null === $wp_query) {
         global $wp_query;
     }
 
@@ -229,34 +232,35 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
         $add_args[ 'sort' ] = (string)$_GET[ 'sort' ];
     }*/
 
-    $pages = paginate_links( array_merge( [
-            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+    $pages = paginate_links(
+        array_merge([
+            'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
             'format'       => '?paged=%#%',
-            'current'      => max( 1, get_query_var( 'paged' ) ),
+            'current'      => max(1, get_query_var('paged')),
             'total'        => $wp_query->max_num_pages,
             'type'         => 'array',
             'show_all'     => false,
             'end_size'     => 3,
             'mid_size'     => 1,
             'prev_next'    => true,
-            'prev_text'    => __( '« Prev' ),
-            'next_text'    => __( 'Next »' ),
+            'prev_text'    => __('« Prev'),
+            'next_text'    => __('Next »'),
             'add_args'     => $add_args,
             'add_fragment' => ''
-        ], $params )
+        ], $params)
     );
 
-    if ( is_array( $pages ) ) {
+    if (is_array($pages)) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
         $pagination = '<div class="pagination-wrapper"><ul class="pagination justify-content-center">';
 
-        foreach ( $pages as $page ) {
-            $pagination .= '<li class="page-item '.(strpos($page, 'current') !== false ? 'active' : '').'"> ' . str_replace( 'page-numbers', 'page-link', $page ) . '</li>';
+        foreach ($pages as $page) {
+            $pagination .= '<li class="page-item ' . (strpos($page, 'current') !== false ? 'active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
         }
 
         $pagination .= '</ul></div>';
 
-        if ( $echo ) {
+        if ($echo) {
             echo $pagination;
         } else {
             return $pagination;
@@ -266,8 +270,9 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
     return null;
 }
 
-function get_subcategory_ids($category) {
-    if(!$category):
+function get_subcategory_ids($category)
+{
+    if (!$category) :
         return;
     endif;
 
@@ -275,8 +280,8 @@ function get_subcategory_ids($category) {
 
     $data = [];
 
-    if($sub_categories) {
-        foreach($sub_categories as $scat) {
+    if ($sub_categories) {
+        foreach ($sub_categories as $scat) {
             array_push($data, $scat->term_id);
         }
     }
@@ -286,51 +291,73 @@ function get_subcategory_ids($category) {
 
 add_filter('pre_get_posts', 'query_post_type');
 
-function query_post_type($query) {
-   if(!is_admin() && $query->is_main_query()) {
-       $culture = get_cat_ID('culture');
-       $article = get_cat_ID('article');
+function query_post_type($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        $culture = get_cat_ID('culture');
+        $article = get_cat_ID('article');
 
-       if($query->is_category($culture) || $query->is_category($article) || $query->is_category(get_subcategory_ids($culture))) {
-        $query->set('post_type', 'artwork');
+        if ($query->is_category($culture) || $query->is_category($article) || $query->is_category(get_subcategory_ids($culture))) {
+            $query->set('post_type', 'artwork');
 
-        return $query;
-       }
-   }
+            return $query;
+        }
+    }
 }
 
 add_filter('category_template', 'creative_frame_template');
 
-function creative_frame_template($template) {
+function creative_frame_template($template)
+{
     $category = get_queried_object();
-    
+
     $culture = get_cat_ID('culture');
     $article = get_cat_ID('article');
 
-    if($category->term_id == $culture) {
+    if ($category->term_id == $culture) {
         $template = locate_template('category-culture.php');
-    } elseif($category->term_id == $article) {
+    } elseif ($category->term_id == $article) {
         $template = locate_template('category-articles.php');
-    } elseif($category->category_parent == $culture) {
+    } elseif ($category->category_parent == $culture) {
         $template = locate_template('category-culture.php');
-    } elseif($category->category_parent == $article) {
+    } elseif ($category->category_parent == $article) {
         $template = locate_template('category-articles.php');
     }
 
     return $template;
 }
 
-function get_language_class() {
+function get_language_class()
+{
     $enable = get_field('enable_language_support');
     $lang = get_field('language');
 
-    if($enable && $lang) {
-        if($lang == 'Arabic') {
+    if ($enable && $lang) {
+        if ($lang == 'Arabic') {
             return 'ar';
-        } elseif($lang == 'Malayalam') {
+        } elseif ($lang == 'Malayalam') {
             return 'ml';
-        } elseif($lang == 'Urdu') {
+        } elseif ($lang == 'Urdu') {
             return 'ur';
         }
     }
+}
+
+function formatSizeUnits($bytes)
+{
+    if ($bytes >= 1073741824) {
+        $bytes = number_format($bytes / 1073741824, 2) . ' GB';
+    } elseif ($bytes >= 1048576) {
+        $bytes = number_format($bytes / 1048576, 2) . ' MB';
+    } elseif ($bytes >= 1024) {
+        $bytes = number_format($bytes / 1024, 2) . ' KB';
+    } elseif ($bytes > 1) {
+        $bytes = $bytes . ' bytes';
+    } elseif ($bytes == 1) {
+        $bytes = $bytes . ' byte';
+    } else {
+        $bytes = '0 bytes';
+    }
+
+    return $bytes;
 }

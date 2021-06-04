@@ -402,3 +402,50 @@ section#single-artwork .box .post-title {
     margin-top: 10px;
     text-align: center;
 }
+
+/* 
+* -----------------------------------------
+* Downloads
+* -----------------------------------------
+*/
+.box.box-3.downloadable {
+    flex-direction: row;
+}
+
+.downloadable .icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloadable .icon span {
+    font-size: 2.5rem;
+    background: #877d4c;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+.downloadable .data {
+    flex: 4;
+    padding-left: 15px;
+}
+
+.downloadable .data .title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.downloadable .data .meta {
+    font-size: .85rem;
+    color: #666;
+}
+
+.downloadable .data .meta .prop {
+    font-weight: 600;
+    color: #444;
+}
+

@@ -95,9 +95,9 @@ function postTypes()
             'singular_name' => 'Download',
         ],
         'menu_icon' => 'dashicons-download',
-        'rewrite' => [
-            'slug' => 'downloads'
-        ]
+        // 'rewrite' => [
+        //     'slug' => 'downloads'
+        // ]
     ]);
 
 }

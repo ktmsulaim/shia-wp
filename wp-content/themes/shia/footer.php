@@ -6,7 +6,7 @@
                 <ul class="footer-links">
                     <li><a href="<?php echo esc_url(site_url('/about-us')); ?>">About US</a></li>
                     <li><a href="<?php echo get_category_link(get_cat_ID('main')); ?>">News & Events</a></li>
-                    <li><a href="<?php echo esc_url(site_url('/downloads')); ?>">Downloads</a></li>
+                    <li><a href="<?php echo esc_url(site_url('/download')); ?>">Downloads</a></li>
                     <li><a href="<?php echo esc_url(site_url('/gallery')); ?>">Gallery</a></li>
                 </ul>
             </div>
