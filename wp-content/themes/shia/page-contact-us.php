@@ -32,6 +32,7 @@ pageHeader([
                         <div class="mt-4" id="phone-numbers">
                             <h4 class="title-1 mb-4">Call us</h4>
                             <p><a href="+914952965145">04952965145</a></p>
+                            <p><a href="+914952356145">04952356145</a></p>
                             <p><a href="+918281536145">8281536145</a></p>
                         </div>
                     </div>

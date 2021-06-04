@@ -58,6 +58,48 @@ function postTypes()
             'slug' => 'artworks'
         ]
     ]);
+    
+    register_post_type('gallery', [
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'hierarchical' => true,
+        'labels' => [
+            'name' => 'Galleries',
+            'add_new_item' => 'Add new gallery',
+            'edit_item' => 'Edit gallery',
+            'all_items' => 'All galleries',
+            'not_found' => 'No galleries found!',
+            'singular_name' => 'Gallery',
+        ],
+        'menu_icon' => 'dashicons-images-alt2',
+        'rewrite' => [
+            'slug' => 'galleries'
+        ]
+    ]);
+
+    
+    register_post_type('download', [
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'supports' => ['title'],
+        'hierarchical' => true,
+        'labels' => [
+            'name' => 'Downloads',
+            'add_new_item' => 'Add new download',
+            'edit_item' => 'Edit download',
+            'all_items' => 'All downloads',
+            'not_found' => 'No downloads found!',
+            'singular_name' => 'Download',
+        ],
+        'menu_icon' => 'dashicons-download',
+        'rewrite' => [
+            'slug' => 'downloads'
+        ]
+    ]);
+
 }
 
 add_action('init', 'postTypes');

@@ -1,6 +1,6 @@
 <a class="news-box-wrapper" href="<?php echo get_the_permalink(); ?>">
     <div class="news-box news-box-1" style="background-image: url(<?php echo post_image(); ?>);">
-        <div class="news-box-title <?php echo get_language_class(); ?>">
+        <div class="news-box-title">
             <?php echo get_the_title(); ?>
         </div>
         <div class="news-box-date">

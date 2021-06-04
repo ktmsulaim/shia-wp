@@ -32,7 +32,7 @@ if ($related && $related->have_posts()) :
                             <img src="<?php echo post_image(); ?>" alt="Post image" class="img-fluid">
                         </div>
                         <div class="news-box-data">
-                            <div class="news-box-title <?php echo get_language_class(); ?>">
+                            <div class="news-box-title">
                                 <?php echo get_the_title(); ?>
                             </div>
                             <div class="news-box-meta">

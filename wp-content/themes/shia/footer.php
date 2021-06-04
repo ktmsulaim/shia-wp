@@ -4,24 +4,24 @@
             <div class="col-md-3 col-6">
                 <h4 class="title-3 text-white">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="javascript:void(0)">About US</a></li>
-                    <li><a href="javascript:void(0)">News & Events</a></li>
-                    <li><a href="javascript:void(0)">Downloads</a></li>
-                    <li><a href="javascript:void(0)">Gallery</a></li>
+                    <li><a href="<?php echo esc_url(site_url('/about-us')); ?>">About US</a></li>
+                    <li><a href="<?php echo get_category_link(get_cat_ID('main')); ?>">News & Events</a></li>
+                    <li><a href="<?php echo esc_url(site_url('/downloads')); ?>">Downloads</a></li>
+                    <li><a href="<?php echo esc_url(site_url('/gallery')); ?>">Gallery</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-6">
                 <h4 class="title-3 text-white">Academic</h4>
                 <ul class="footer-links">
-                    <li><a href="javascript:void(0)">Students' Union</a></li>
-                    <li><a href="javascript:void(0)">Creative Frames</a></li>
-                    <li><a href="javascript:void(0)">Students portal</a></li>
+                    <li><a href="<?php echo esc_url(site_url('/students-corner#students-union')); ?>">Students' Union</a></li>
+                    <li><a href="<?php echo esc_url(site_url('/students-corner#creative-frame-section')); ?>">Creative Frames</a></li>
+                    <li><a href="http://portal.dhiu.in/parent">Students portal</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-6 mt-4 mt-md-0">
                 <h4 class="title-3 text-white">Others</h4>
                     <ul class="footer-links">
-                        <li><a href="javascript:void(0)">DHIU</a></li>
+                        <li><a href="https://dhiu.in">DHIU</a></li>
                     </ul>
             </div>
             <div class="col-md-3 col-6 mt-4 mt-md-0">
@@ -40,13 +40,13 @@
                         <li><a href="javascript:void(0)">
                                 <span class="mdi mdi-whatsapp"></span>
                             </a></li>
-                        <li><a href="javascript:void(0)">
+                        <li><a href="https://www.facebook.com/ShamsulHudaKuttikkattoor" target="_blank">
                                 <span class="mdi mdi-facebook"></span>
                             </a></li>
-                        <li><a href="javascript:void(0)">
+                        <li><a href="https://instagram.com/shamsul_huda_kuttikkattur?igshid=1c90b61kzwtsf" target="_blank">
                                 <span class="mdi mdi-instagram"></span>
                             </a></li>
-                        <li><a href="javascript:void(0)">
+                        <li><a href="https://www.youtube.com/channel/UCfZ2RjtePdJutaE6kHrW5HA/video00" target="_blank">
                                 <span class="mdi mdi-youtube"></span>
                             </a></li>
                     </ul>

@@ -8,6 +8,7 @@ function scripts()
     wp_enqueue_style('slick', get_theme_file_uri('/css/slick/slick.css'));
     wp_enqueue_style('slickTheme', get_theme_file_uri('/css/slick/slick-theme.css'));
     wp_enqueue_style('materialicons', get_theme_file_uri('/css/materialdesignicons.min.css'));
+    wp_enqueue_style('lightBoxGallery', get_theme_file_uri('/css/lightbox.min.css'));
     wp_enqueue_style('animate', get_theme_file_uri('/css/animate.css'));
     wp_enqueue_style('main', get_theme_file_uri('/css/main.css'));
     wp_enqueue_style('responsive', get_theme_file_uri('/css/responsive.css'));
@@ -18,6 +19,7 @@ function scripts()
     wp_enqueue_script('jqueryEasyTicker', get_theme_file_uri('/js/jquery.easy-ticker.min.js'), NULL, '3.1.0', false);
     wp_enqueue_script('jqueryEasing', get_theme_file_uri('/js/jquery.easing.min.js'), NULL, '1.0.0', false);
     wp_enqueue_script('mouseTrap', get_theme_file_uri('/js/mousetrap.min.js'), NULL, '1.0.0', false);
+    wp_enqueue_script('lightBoxGallery', get_theme_file_uri('/js/lightbox.min.js'), NULL, '1.0.0', false);
     wp_enqueue_script('search', get_theme_file_uri('/js/search.js'), NULL, '1.0.0', false);
     wp_enqueue_script('custom', get_theme_file_uri('/js/main.js'), NULL, '1.0', false);
 }
@@ -109,7 +111,7 @@ function pageHeader(array $attributes = ['title' => null, 'page_banner' => null,
             <div class="row">
                 <div class="col">
                     <div class="header-box">
-                        <div class="title <?php echo get_language_class(); ?>"><?php echo $attributes['title']; ?></div>
+                        <div class="title"><?php echo $attributes['title']; ?></div>
                         <div class="breadcrumb-wrapper">
                             <ul class="breadcrumb">
                                 <li><a href="<?php echo esc_url(site_url('/')); ?>">Home</a></li>

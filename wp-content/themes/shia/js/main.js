@@ -58,9 +58,9 @@ $(function () {
         }
 
         if (scrolled === true) {
-            mainNav.find('.logo>img').css({width: '50px'});
+            mainNav.find('.logo>img').css({width: '160px'});
         } else {
-            mainNav.find('.logo>img').css({width: '80px'});
+            mainNav.find('.logo>img').css({width: '230px'});
         }
 
     }
@@ -472,4 +472,28 @@ $(function () {
       }
 
       $('.go-to-url').click(goToURL);
+
+
+       /**
+       * --------------------------------------------------------
+       *  Gallery Plugin init
+       * --------------------------------------------------------
+       */
+        function buildGallery() {
+            const gallery = $('#gallery');
+            const images = gallery.find('img');
+
+            if(images.length) {
+                images.each(function(i, el){
+                    if(!$(el).parent('a').length) {
+                        const src = $(el).attr('src');
+                        const classNames = $(el).attr('class');
+                        const slide = `<a href="${src}" data-lightbox="${gallery.data('name')}"><img src="${src}" class="${classNames}"></a>`;
+                        $(el).parent().html(slide);
+                    }
+                })
+            }
+        }
+
+        buildGallery()
 })

@@ -33,10 +33,10 @@
                                 <li><a href="javascript:void(0)">
                                         <span class="mdi mdi-whatsapp"></span>
                                     </a></li>
-                                <li><a href="javascript:void(0)">
+                                <li><a href="https://instagram.com/shamsul_huda_kuttikkattur?igshid=1c90b61kzwtsf" target="_blank">
                                         <span class="mdi mdi-instagram"></span>
                                     </a></li>
-                                <li><a href="javascript:void(0)">
+                                <li><a href="https://www.youtube.com/channel/UCfZ2RjtePdJutaE6kHrW5HA/video" target="_blank">
                                         <span class="mdi mdi-youtube"></span>
                                     </a></li>
                             </ul>
@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between" id="navWrapper">
                     <div class="logo p-2">
-                        <img class="go-to-url" data-target="<?php echo esc_url(site_url('/')); ?>" src="<?php echo get_theme_file_uri('img/logo.png') ?>" width="80" alt="">
+                        <img class="go-to-url" data-target="<?php echo esc_url(site_url('/')); ?>" src="<?php echo get_theme_file_uri('img/logo-with-text.png') ?>" width="160" alt="">
                     </div>
                     <div class="menu">
                         <ul class="dropdown-items">
@@ -94,23 +94,19 @@
                                 </ul>
                             </li>
                             <li class="<?php echo is_active('/huda-book-cell/'); ?>"><a href="<?php echo esc_url(site_url('/huda-book-cell')); ?>">Huda Book Cell</a></li>
-                            <li class="<?php echo is_active('/students-corner/'); ?>">
-                                <a href="<?php echo esc_url(site_url('/students-corner')); ?>">Students corner</a>
-                                <ul class="menu-items animated faster">
+                        
                                     <li><a class="scrollTo" data-target="#students-union" href="<?php echo esc_url(site_url('/students-corner#students-union')); ?>">Students' union</a></li>
                                     <li>
                                         <a class="scrollTo" data-target="#creative-frame-section" href="<?php echo esc_url(site_url('/students-corner#creative-frame-section')); ?>">Creative Frame</a>
-                                        <ul class="menu-items animated faster sub">
+                                        <ul class="menu-items animated faster">
                                             <li><a href="<?php echo get_category_link(get_cat_ID('articles')); ?>">Articles</a></li>
                                             <li><a href="<?php echo get_category_link(get_cat_ID('culture')); ?>">Culture</a></li>
                                         </ul>
                                     </li>
-                                </ul>
-                            </li>
                             <li class="<?php echo is_active('/contact-us/'); ?>"><a href="<?php echo esc_url(site_url('/contact-us')); ?>">Contact us</a></li>
                         </ul>
                     </div>
-                    <div id="search-mobile-nav">
+                    <div id="search-mobile-nav" class="d-flex">
                         <div class="search">
                             <span id="searchTrigger" class="mdi mdi-magnify"></span>
 

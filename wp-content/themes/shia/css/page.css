@@ -390,3 +390,15 @@ section#single-artwork .box .post-image img {
 section#single-artwork .box .post-title {
     text-align: center;
 }
+
+
+/* 
+* -----------------------------------------
+* Gallery
+* -----------------------------------------
+*/
+
+.gallery .title {
+    margin-top: 10px;
+    text-align: center;
+}

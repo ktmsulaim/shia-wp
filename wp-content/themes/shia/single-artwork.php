@@ -65,6 +65,11 @@ pageHeader([
                         </div>
                         <div class="author-name <?php echo get_language_class(); ?>">
                             <p><?php echo get_field('author_name'); ?></p>
+                            <?php
+                            if (get_field('class')) :
+                            ?>
+                                <p class="small text-muted">(<?php echo get_field('class'); ?>)</p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
