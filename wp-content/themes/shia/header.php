@@ -59,10 +59,10 @@
                                     About
                                 </a>
                                 <ul class="menu-items animated faster">
-                                    <li><a class="scrollTo" data-target="#overview" href="<?php echo esc_url(site_url('/about-us/#overview')); ?>">Overview</a></li>
-                                    <li><a class="scrollTo" data-target="#history" href="<?php echo esc_url(site_url('/about-us/#history')); ?>">History</a></li>
-                                    <li><a class="scrollTo" data-target="#philosophy" href="<?php echo esc_url(site_url('/about-us/#philosophy')); ?>">Our philosophy</a></li>
-                                    <li><a class="scrollTo" data-target="#vision-and-mission" href="<?php echo esc_url(site_url('/about-us/#vision-and-mission')); ?>">Vision and Mission</a></li>
+                                    <li><a  href="<?php echo esc_url(site_url('/about-us/overview')); ?>">Overview</a></li>
+                                    <li><a  href="<?php echo esc_url(site_url('/about-us/history')); ?>">History</a></li>
+                                    <li><a  href="<?php echo esc_url(site_url('/about-us/philosophy')); ?>">Our philosophy</a></li>
+                                    <li><a  href="<?php echo esc_url(site_url('/about-us/vision-and-mission')); ?>">Vision and Mission</a></li>
                                     <li><a href="<?php echo esc_url(site_url('/about-us/management')); ?>">Management</a></li>
                                 </ul>
                             </li>
