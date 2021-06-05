@@ -6,8 +6,8 @@ pageHeader([
     'title' => 'Creative Frame',
     'breadcrumb' => [
         0 => [
-            'label' => 'Category name',
-            'url' => '#'
+            'label' => 'Creative frame',
+            'url' => 'javascript:void(0)'
         ]
     ],
     'page_banner' => get_theme_file_uri('/img/banner-art.jpg'),
@@ -30,7 +30,7 @@ pageHeader([
                     ?>
 
                     <div class="post-title <?php echo get_language_class(); ?>">
-                        <h4><?php echo get_the_title(); ?></h4>
+                        <h4 <?php echo get_text_direction(); ?>><?php echo get_the_title(); ?></h4>
                     </div>
 
                     <div class="post-meta">
@@ -46,7 +46,7 @@ pageHeader([
                         </ul>
                     </div>
 
-                    <div class="content <?php echo get_language_class(); ?>">
+                    <div class="content <?php echo get_language_class(); ?>" <?php echo get_text_direction(); ?>>
                         <?php echo get_the_content(); ?>
                     </div>
 

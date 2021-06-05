@@ -343,6 +343,13 @@ function get_language_class()
     }
 }
 
+function get_text_direction()
+{
+    if(get_language_class() == 'ar') {
+        return 'dir="rtl"';
+    }
+}
+
 function formatSizeUnits($bytes)
 {
     if ($bytes >= 1073741824) {
