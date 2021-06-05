@@ -269,6 +269,47 @@ ul.overview-sections li a:hover {
 
 
 /*
+* Management page
+*/
+/* .management {
+    margin-bottom: 20px;
+} */
+
+.box.box-management {
+    box-shadow: none;
+    border: 1px solid #e1e1e1;
+}
+
+.box.box-management .name, .box.box-management .position {
+    text-align: center;
+}
+
+.box-management .image {
+    min-height: 200px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box-management .image img {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-management .name {
+    margin-top: 10px;
+}
+
+.box-management .position {
+    color: #18a773;
+}
+
+
+/*
 * Facilities page
 */
 

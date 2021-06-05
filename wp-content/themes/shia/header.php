@@ -30,7 +30,7 @@
                                 </a>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="javascript:void(0)">
+                                <li><a href="https://api.whatsapp.com/send?phone=918606071078" target="_blank">
                                         <span class="mdi mdi-whatsapp"></span>
                                     </a></li>
                                 <li><a href="https://instagram.com/shamsul_huda_kuttikkattur?igshid=1c90b61kzwtsf" target="_blank">

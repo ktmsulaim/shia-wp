@@ -37,7 +37,7 @@
                 </div>
                 <div class="mt-3">
                     <ul class="social-icons justify-md-content-center">
-                        <li><a href="javascript:void(0)">
+                        <li><a href="https://api.whatsapp.com/send?phone=918606071078" target="_blank">
                                 <span class="mdi mdi-whatsapp"></span>
                             </a></li>
                         <li><a href="https://www.facebook.com/ShamsulHudaKuttikkattoor" target="_blank">

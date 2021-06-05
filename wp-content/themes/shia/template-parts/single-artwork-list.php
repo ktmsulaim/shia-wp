@@ -5,7 +5,7 @@
                 <img src="<?php post_image(); ?>" alt="Post image" class="img-fluid">
             </div>
             <div class="artwork-box__data">
-                <div class="title">
+                <div class="title <?php echo get_language_class(); ?>">
                     <?php echo get_the_title(); ?>
                 </div>
                 <div class="category-names">
