@@ -107,6 +107,9 @@
     font-family: 'DroidKufi', 'Lato', 'sans-serif' !important;
 }
 
+.ar:not(h4), .ar *:not(h4) {
+    text-align: right !important;
+}
 /*
 * -----------------------------------------------------------------
 *  Noto Nastaliq Urdu
