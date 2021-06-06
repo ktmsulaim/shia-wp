@@ -29,7 +29,7 @@ pageHeader([
                 while(have_posts()):
                     the_post();
                     echo '<div class="col-md-4 ' .($count > 3 ? 'mt-4' : '') .'"><ul class="artworks-list">';
-                    get_template_part('template-parts/single', 'artwork-list');
+                    get_template_part('template-parts/single', 'culture-aw');
                     echo '</ul></div>';
 
                     $count++;

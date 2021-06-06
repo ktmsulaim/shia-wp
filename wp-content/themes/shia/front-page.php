@@ -203,8 +203,7 @@ get_header();
                     <?php
                     $culture_aws = new WP_Query([
                         'post_type' => 'artwork',
-                        'category_name' => 'culture',
-                        'posts_per_page' => 3
+                        'posts_per_page' => 6
                     ]);
 
                     if ($culture_aws->have_posts()) :

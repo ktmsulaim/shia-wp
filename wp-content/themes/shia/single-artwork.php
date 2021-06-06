@@ -57,7 +57,7 @@ pageHeader([
             </div>
             <div class="col-md-3">
                 <div class="box h-auto">
-                    <h4 class="title-2 mb-2">Author</h4>
+                    <h4 class="title-2 mb-2">Writer</h4>
 
                     <div class="text-center">
                         <div class="author-image mb-2">

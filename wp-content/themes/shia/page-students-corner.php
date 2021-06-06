@@ -75,35 +75,6 @@ pageHeader([
                         ?>
                     </div>
                 </div>
-                <div id="creative-frame-section" class="mt-5 pt-4">
-                    <h4 class="title-2">Creative frame</h4>
-                    <div class="content">
-                        <?php echo get_field('creative_frame'); ?>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="facility-box">
-                                <div class="icon">
-                                    <span class="mdi mdi-text-box-outline"></span>
-                                </div>
-                                <div class="title">
-                                    <a href="<?php echo get_category_link(get_cat_ID('articles')); ?>">Articles</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="facility-box">
-                                <div class="icon">
-                                    <span class="mdi mdi-account-group-outline"></span>
-                                </div>
-                                <div class="title">
-                                    <a href="<?php echo get_category_link(get_cat_ID('culture')); ?>">Culture</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="content">
                     <?php echo get_the_content(); ?>
                 </div>

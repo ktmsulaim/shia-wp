@@ -200,6 +200,8 @@ ul.artworks-list .artwork-box .artwork-box__data .author .author-name {
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .wpb_page_list li a {

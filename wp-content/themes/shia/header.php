@@ -95,14 +95,14 @@
                             </li>
                             <li class="<?php echo is_active('/huda-book-cell/'); ?>"><a href="<?php echo esc_url(site_url('/huda-book-cell')); ?>">Huda Book Cell</a></li>
                         
-                                    <li><a class="scrollTo" data-target="#students-union" href="<?php echo esc_url(site_url('/students-corner#students-union')); ?>">Students' union</a></li>
-                                    <li>
-                                        <a class="scrollTo" data-target="#creative-frame-section" href="<?php echo esc_url(site_url('/students-corner#creative-frame-section')); ?>">Creative Frame</a>
-                                        <ul class="menu-items animated faster">
-                                            <li><a href="<?php echo get_category_link(get_cat_ID('articles')); ?>">Articles</a></li>
-                                            <li><a href="<?php echo get_category_link(get_cat_ID('culture')); ?>">Culture</a></li>
-                                        </ul>
-                                    </li>
+                            <li class="<?php echo is_active('/students-corner/'); ?>"><a href="<?php echo esc_url(site_url('/students-corner')); ?>">Students' union</a></li>
+                            <li class="<?php echo is_active('/creative-frame/'); ?>">
+                                <a href="<?php echo esc_url(site_url('/creative-frame')); ?>">Creative Frame</a>
+                                <ul class="menu-items animated faster">
+                                    <li><a href="<?php echo get_category_link(get_cat_ID('articles')); ?>">Articles</a></li>
+                                    <li><a href="<?php echo get_category_link(get_cat_ID('culture')); ?>">Culture</a></li>
+                                </ul>
+                            </li>
                             <li class="<?php echo is_active('/contact-us/'); ?>"><a href="<?php echo esc_url(site_url('/contact-us')); ?>">Contact us</a></li>
                         </ul>
                     </div>
