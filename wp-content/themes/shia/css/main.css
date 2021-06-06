@@ -173,6 +173,7 @@ ul.dropdown-items li a {
     align-items: center;
     margin: 0 10px;
     position: relative;
+    font-size: 0.90rem;
     /* border-bottom: 3px solid transparent; */
 }
 
@@ -708,7 +709,7 @@ button.accordion-button {
 * ---------------------------------------------------------------
 */
 
-section#mission-and-vision #blockImage {
+section#mission-and-vision {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
