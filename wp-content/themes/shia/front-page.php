@@ -100,7 +100,7 @@ get_header();
     </div>
 </section>
 
-<section class="bg-dark" id="mission-and-vision" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<?php echo get_theme_file_uri('img/drone1.JPG') ?>);">
+<section class="bg-dark" id="mission-and-vision" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<?php echo get_theme_file_uri('img/dron.JPG') ?>);">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7 mx-auto py-5">
