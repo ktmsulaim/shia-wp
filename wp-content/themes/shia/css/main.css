@@ -709,7 +709,7 @@ button.accordion-button {
 * ---------------------------------------------------------------
 */
 
-section#mission-and-vision {
+section#mission-and-vision #blockImage {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

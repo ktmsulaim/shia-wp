@@ -100,10 +100,13 @@ get_header();
     </div>
 </section>
 
-<section class="bg-dark" id="mission-and-vision" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<?php echo get_theme_file_uri('img/dron.JPG') ?>);">
+<section class="bg-dark" id="mission-and-vision" >
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7 mx-auto py-5">
+            <div class="col-md-6" id="blockImage" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<?php echo get_theme_file_uri('img/dron.JPG') ?>);">
+                            
+            </div>
+            <div class="col-md-6 py-5">
                 <div class="accordion accordion-flush p-4" id="aboutAccordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="missionTitle">
