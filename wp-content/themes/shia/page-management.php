@@ -65,7 +65,7 @@ pageHeader([
                                     <img src="<?php echo get_theme_file_uri('/img/president.jpg'); ?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="name">
-                                    A.T BASHEER HAJI
+                                    NP KOYA HAJI
                                 </div>
                                 <div class="position">President</div>
                             </div>
