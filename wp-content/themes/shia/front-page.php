@@ -145,7 +145,7 @@ get_header();
             <div class="col-md-9 mx-auto">
                 <div class="box box-quote">
                     <div class="box-quote-image">
-                        <img src="<?php echo get_theme_file_uri('img/principal.JPG'); ?>" alt="Principal">
+                        <img src="<?php echo get_theme_file_uri('img/principal.jpg'); ?>" alt="Principal">
                         <div class="box-quote-name">
                             <div class="full-name">Unais Hudawi</div>
                             <div class="position">Principal</div>
