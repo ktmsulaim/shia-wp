@@ -31,3 +31,4 @@ wp-content/*
 wp-content/themes/*
 !wp-content/themes/shia/
 .DS_Store
+wp-content/themes/shia/img/.DS_Store

@@ -434,6 +434,12 @@ section#single-artwork .box .post-title {
     text-align: center !important;
 }
 
+section#single-artwork .box .post-title.ml h4 {
+    font-weight: 600;
+    font-size: 1.95rem;
+    margin: 20px 0;
+}
+
 
 /* 
 * -----------------------------------------

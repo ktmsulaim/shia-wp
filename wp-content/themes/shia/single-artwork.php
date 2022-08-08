@@ -12,7 +12,6 @@ pageHeader([
     ],
     'page_banner' => get_theme_file_uri('/img/banner-art.jpg'),
 ]);
-
 ?>
 <section id="single-artwork" class="section bg-light">
     <div class="container">
@@ -73,7 +72,6 @@ pageHeader([
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </section>
